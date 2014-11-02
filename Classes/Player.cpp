@@ -12,23 +12,23 @@ Player::~Player(void)
 
 bool Player::init()
 {
-	//ÏÈ³õÊ¼»¯¸¸ÀàµÄinitº¯Êı
+	//å…ˆåˆå§‹åŒ–çˆ¶ç±»çš„initå‡½æ•°
 	if(!Sprite::init())
 		return false;
 
-	//µ÷ÓÃ¸¸ÀàµÄinitWithSpriteFrameNameº¯Êı£¬´«Èëframename£¬ÕâÑùÎÒÃÇµÄplayer¾ÍÓĞÁËÍ¼Æ¬ÁË£¬ÔÚMainGameÖĞ
-	//Ê×ÏÈÒª½«ÓÃµ½µÄÎÆÀí¼ÓÔØ½ø¾«ÁéÖ¡»º´æ
+	//è°ƒç”¨çˆ¶ç±»çš„initWithSpriteFrameNameå‡½æ•°ï¼Œä¼ å…¥framenameï¼Œè¿™æ ·æˆ‘ä»¬çš„playerå°±æœ‰äº†å›¾ç‰‡äº†ï¼Œåœ¨MainGameä¸­
+	//é¦–å…ˆè¦å°†ç”¨åˆ°çš„çº¹ç†åŠ è½½è¿›ç²¾çµå¸§ç¼“å­˜
 	this->initWithSpriteFrameName("hero1.png");
-	//²¥·Å·É»úµÄ¶¯»­
+	//æ’­æ”¾é£æœºçš„åŠ¨ç”»
 	this->flyAction();
 
 	return true;
 }
 
-//·É»úµÄ¶¯»­
+//é£æœºçš„åŠ¨ç”»
 void Player::flyAction()
 {
-	//ÕâÀïÊ¹ÓÃÁíÒ»ÖÖ·½Ê½À´²¥·Å¶¯»­
+	//è¿™é‡Œä½¿ç”¨å¦ä¸€ç§æ–¹å¼æ¥æ’­æ”¾åŠ¨ç”»
 	Vector<SpriteFrame *> vector;
 	for(int i=0;i<2;i++)
 	{
@@ -36,7 +36,7 @@ void Player::flyAction()
 		auto temSpriteFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName->getCString());
 		vector.pushBack(temSpriteFrame);
 	}
-	//ÉèÖÃ²»¶Ï²¥·Å·É»úµÄ¶¯»­
+	//è®¾ç½®ä¸æ–­æ’­æ”¾é£æœºçš„åŠ¨ç”»
 	auto animation = Animation::createWithSpriteFrames(vector,0.2f,-1);
 	auto animate = Animate::create(animation);
 	this->runAction(animate);

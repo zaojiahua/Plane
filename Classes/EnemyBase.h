@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-//µĞ»úÀàµÄ¸¸Àà£¬¼Ì³Ğ×ÔSprite
+//æ•Œæœºç±»çš„çˆ¶ç±»ï¼Œç»§æ‰¿è‡ªSprite
 class EnemyBase : public Sprite
 {
 public:
@@ -14,29 +14,29 @@ public:
 	bool init();
 	CREATE_FUNC(EnemyBase);
 public:
-	//±¬Õ¨¶¯»­
+	//çˆ†ç‚¸åŠ¨ç”»
 	void blowUp();
-	//ÊÜÉË¶¯»­
+	//å—ä¼¤åŠ¨ç”»
 	void hit();
-	//±¬Õ¨Íê±Ï´Ó¹ÜÀíÆ÷ÖĞÒÆ³ı×Ô¼º
+	//çˆ†ç‚¸å®Œæ¯•ä»ç®¡ç†å™¨ä¸­ç§»é™¤è‡ªå·±
 	void removeFromManager();
 	void onEnterTransitionDidFinish();
-	//¸Ä±äµĞ»úµÄ×ø±ê
+	//æ”¹å˜æ•Œæœºçš„åæ ‡
 	void move(float tm);
-	//³õÊ¼»¯µĞ»ú£¬Àï±ß´«ÈëĞèÒªÊ¹ÓÃµÄÎÆÀíÃû×Ö£¬Ìá¹©Ä¬ÈÏ²ÎÊı
+	//åˆå§‹åŒ–æ•Œæœºï¼Œé‡Œè¾¹ä¼ å…¥éœ€è¦ä½¿ç”¨çš„çº¹ç†åå­—ï¼Œæä¾›é»˜è®¤å‚æ•°
 	void initEnemy(std::string name = "enemy1",int count = 4);
-	//»ñµÃµĞ»úÔ­Ê¼µÄÑªÁ¿Öµ
+	//è·å¾—æ•ŒæœºåŸå§‹çš„è¡€é‡å€¼
 	int getOriginalHp(){return (m_frameName[5]-'0')*5;};
 private:
-	//»ñµÃstart-end·¶Î§ÄÚµÄÒ»¸öËæ»úÊı
+	//è·å¾—start-endèŒƒå›´å†…çš„ä¸€ä¸ªéšæœºæ•°
 	int getRandomNumber(int start,int end);
-	//µĞ»úµÄÆ«ÒÆÁ¿
+	//æ•Œæœºçš„åç§»é‡
 	enum {OFFSET = 5};
-	//³õÊ¼»¯µĞ»úÓÃµ½µÄÎÆÀíÃû³Æ
+	//åˆå§‹åŒ–æ•Œæœºç”¨åˆ°çš„çº¹ç†åç§°
 	std::string m_frameName;
-	//±¬Õ¨Ğ§¹ûµÄÎÆÀíÊıÁ¿
+	//çˆ†ç‚¸æ•ˆæœçš„çº¹ç†æ•°é‡
 	int m_count;
-	//µĞ»úµÄÑªÁ¿Öµ£¬ÊµÏÖÁËgetºÍset·½·¨
+	//æ•Œæœºçš„è¡€é‡å€¼ï¼Œå®ç°äº†getå’Œsetæ–¹æ³•
 	//int m_hp;
 	CC_SYNTHESIZE(int,m_hp,Hp);
 };

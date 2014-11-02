@@ -28,23 +28,23 @@ bool Pause::init()
 
 	auto index = UserDefault::getInstance()->getIntegerForKey("index");
 	auto str = __String::createWithFormat("pause%d.png",index-1);
-	//CCFileUtils::sharedFileUtils()->getWritablePath();Ìá¹©ÁËÒ»¸ö¿ÉÒÔ´æ´¢µÄÂ·¾¶
+	//CCFileUtils::sharedFileUtils()->getWritablePath();æä¾›äº†ä¸€ä¸ªå¯ä»¥å­˜å‚¨çš„è·¯å¾„
 	auto fullPath = FileUtils::getInstance()->getWritablePath() + str->getCString();
-	//ÕâÀï°Ñ½ØÆÁµÄÄÇÕÅÍ¼Æ¬×öÎª±³¾°Í¼Æ¬
+	//è¿™é‡ŒæŠŠæˆªå±çš„é‚£å¼ å›¾ç‰‡åšä¸ºèƒŒæ™¯å›¾ç‰‡
 	auto background = Sprite::create(fullPath);
 	background->setPosition(Point(size.width/2,size.height/2));
 	this->addChild(background);
 
-	//Ìí¼Ó»Ö¸´ÓÎÏ·µÄ°´Å¥
+	//æ·»åŠ æ¢å¤æ¸¸æˆçš„æŒ‰é’®
 	auto resume = MenuItemImage::create();
 	resume->setNormalSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("resume_button.png"));
 	auto sound = Sound::getInstance();
 	auto callback = [& sound](Ref * ref)
 	{
 		sound->playEffect(EFFECT_TYPE_BUTTON);
-		//»Ö¸´±³¾°ÒôÀÖ PauseÖÐ»Ö¸´³¡¾°µÄÊ±ºòµ÷ÓÃ
+		//æ¢å¤èƒŒæ™¯éŸ³ä¹ Pauseä¸­æ¢å¤åœºæ™¯çš„æ—¶å€™è°ƒç”¨
 		sound->playBgMusic(MUSIC_TYPE_BACKGROUND);
-		//µ¯³ö±£´æµÄ³¡¾°
+		//å¼¹å‡ºä¿å­˜çš„åœºæ™¯
 		Director::getInstance()->popScene();
 	};
 	resume->setCallback(callback);
@@ -52,7 +52,7 @@ bool Pause::init()
 	menu->setPosition(Point(size.width*0.95,size.height*0.97));
 	this->addChild(menu);
 
-	//loadingµÄ¶¯»­Ð§¹û
+	//loadingçš„åŠ¨ç”»æ•ˆæžœ
 	Vector<SpriteFrame *> vector;
 	for(int i=0;i<6;i++)
 	{
@@ -62,7 +62,7 @@ bool Pause::init()
 	}
 	auto animation = Animation::createWithSpriteFrames(vector,0.2f,-1);
 	auto animate = Animate::create(animation);
-	//ÉèÖÃÓÃÀ´Ö´ÐÐ¶¯»­µÄloadingÍ¼Æ¬
+	//è®¾ç½®ç”¨æ¥æ‰§è¡ŒåŠ¨ç”»çš„loadingå›¾ç‰‡
 	auto loading = Sprite::createWithSpriteFrameName("loading_1.png");
 	loading->setPosition(Point(size.width*0.85,size.height*0.1));
 	this->addChild(loading);

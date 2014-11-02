@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-//¼Ì³Ð×ÔSprite
+//ç»§æ‰¿è‡ªSprite
 class Player : public Sprite
 {
 public:
@@ -13,7 +13,7 @@ public:
 public:
 	bool init();
 	CREATE_FUNC(Player);
-	//·É»úµÄ¶¯×÷
+	//é£žæœºçš„åŠ¨ä½œ
 	void flyAction();
 };
 

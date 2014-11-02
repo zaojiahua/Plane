@@ -1,27 +1,27 @@
 #ifndef _MAIN_GAME_H_
 #define _MAIN_GAME_H_
 #include "cocos2d.h"
-//°üº¬µØÍ¼²ã
-#include "Layer/Background.h"
-//¿ªÊ¼ÓÎÏ·³¡¾°
+//åŒ…å«åœ°å›¾å±‚
+#include "Background.h"
+//å¼€å§‹æ¸¸æˆåœºæ™¯
 #include "StartGame.h"
-//Íæ¼ÒÀà
-#include "Player\Player.h"
-//µĞ»úÀà
-#include "Enemy\EnemyBase.h"
-//×Óµ¯Àà
-#include "Bullet\Bullet.h"
-//¹ÜÀíÀà
-#include "Manager\Manager.h"
-//UFOÀà
-#include "Ufo\Ufo.h"
-//ui²ã
-#include "Layer\UILayer.h"
-//ÓÎÏ·½áÊø³¡¾°
+//ç©å®¶ç±»
+#include "Player.h"
+//æ•Œæœºç±»
+#include "EnemyBase.h"
+//å­å¼¹ç±»
+#include "Bullet.h"
+//ç®¡ç†ç±»
+#include "Manager.h"
+//UFOç±»
+#include "Ufo.h"
+//uiå±‚
+#include "UILayer.h"
+//æ¸¸æˆç»“æŸåœºæ™¯
 #include "GameOver.h"
 
 USING_NS_CC;
-//ÓÎÏ·Ö÷³¡¾°
+//æ¸¸æˆä¸»åœºæ™¯
 class MainGame : public Layer
 {
 public:
@@ -31,43 +31,43 @@ public:
 	static Scene * createScene();
 	bool init();
 	CREATE_FUNC(MainGame);
-	//Ğ¶ÔØ×ÊÔ´
+	//å¸è½½èµ„æº
 	void onExit();
 public:
-	//¶Ô·µ»Ø¼üµÄ¼àÌıº¯Êı
+	//å¯¹è¿”å›é”®çš„ç›‘å¬å‡½æ•°
 	void onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent);
-	//ÆÁÄ»´¥ÃşµÄ¼àÌıº¯Êı
+	//å±å¹•è§¦æ‘¸çš„ç›‘å¬å‡½æ•°
 	bool onTouchBegan(Touch * touch,Event * pEvent);
 	void onTouchMoved(Touch * touch,Event * pEvent);
-	//³¡¾°ÇĞ»»Íê±Ïµ÷ÓÃ
+	//åœºæ™¯åˆ‡æ¢å®Œæ¯•è°ƒç”¨
 	void onEnterTransitionDidFinish();
 private:
-	//¼àÌıÆ÷
+	//ç›‘å¬å™¨
 	EventListenerKeyboard * m_listener;
 	EventListenerTouchOneByOne * m_touchListener;
-	//Éè±¸´óĞ¡
+	//è®¾å¤‡å¤§å°
 	Size m_size;
-	//Íæ¼Ò
+	//ç©å®¶
 	Player * m_player;
-	//UFO»òÕßÊÇÕ¨µ¯
+	//UFOæˆ–è€…æ˜¯ç‚¸å¼¹
 	Ufo * m_ufo;
 	//ui
 	UILayer * m_ui;
-	//×Óµ¯Ãû³Æ
+	//å­å¼¹åç§°
 	std::string m_bulletName;
-	//Ìí¼ÓµĞ»ú
+	//æ·»åŠ æ•Œæœº
 	void addEnemy(float tm);
-	//Ìí¼Ó×Óµ¯
+	//æ·»åŠ å­å¼¹
 	void addBullet(float tm);
-	//µ±Íæ¼Ò·É»úºÍUFOÅö×²ÒÔºóÌí¼Ó×Óµ¯
+	//å½“ç©å®¶é£æœºå’ŒUFOç¢°æ’ä»¥åæ·»åŠ å­å¼¹
 	void addBulletByUfo(float tm);
-	//Ìí¼ÓUFOºÍÕ¨µ¯
+	//æ·»åŠ UFOå’Œç‚¸å¼¹
 	void addUfo(float tm);
-	//Åö×²¼ì²â
+	//ç¢°æ’æ£€æµ‹
 	void isHitEnemy(float tm);
-	//Íæ¼Ò¼¶±ğ
+	//ç©å®¶çº§åˆ«
 	int m_level;
-	//ÓÎÏ·½áÊø
+	//æ¸¸æˆç»“æŸ
 	void gameOver();
 };
 

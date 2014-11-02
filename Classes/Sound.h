@@ -1,41 +1,41 @@
 #ifndef _SOUND_H_
 #define _SOUND_H_
 #include "cocos2d.h"
-//ÉùÒôÒıÇæ
+//å£°éŸ³å¼•æ“
 #include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
 
-//°ÑÓÃµ½µÄÒôÀÖ×öÎªÃ¶¾ÙÀàĞÍ
+//æŠŠç”¨åˆ°çš„éŸ³ä¹åšä¸ºæšä¸¾ç±»å‹
 enum MUSIC_TYPE
 {
-	//ÓÎÏ·µÄ±³¾°ÒôÀÖ game_music.mp3
+	//æ¸¸æˆçš„èƒŒæ™¯éŸ³ä¹ game_music.mp3
 	MUSIC_TYPE_BACKGROUND,
-	//×î´óµÄµĞ»ú·ÉĞĞÊ±ºòµÄ±³¾°ÒôÀÖ big_spaceship_flying.mp3
+	//æœ€å¤§çš„æ•Œæœºé£è¡Œæ—¶å€™çš„èƒŒæ™¯éŸ³ä¹ big_spaceship_flying.mp3
 	MUSIC_TYPE_BIG_SPACESHIP_FLYING,
 };
 
-//°ÑÓÃµ½µÄÒôÀÖ×öÎªÃ¶¾ÙÀàĞÍ
+//æŠŠç”¨åˆ°çš„éŸ³ä¹åšä¸ºæšä¸¾ç±»å‹
 enum EFFECT_TYPE
 {
-	//µ¥»÷²Ëµ¥°´Å¥Ê±ºòµÄÒôĞ§ button.mp3
+	//å•å‡»èœå•æŒ‰é’®æ—¶å€™çš„éŸ³æ•ˆ button.mp3
 	EFFECT_TYPE_BUTTON,
-	//·¢Éä×Óµ¯Ê±ºòµÄÒôĞ§ bullet.mp3
+	//å‘å°„å­å¼¹æ—¶å€™çš„éŸ³æ•ˆ bullet.mp3
 	EFFECT_TYPE_BULLET,
-	//µĞ»úÕ¨»ÙµÄÒôĞ§ enemy1_down.mp3 enemy2_down.mp3 enemy3_down.mp3
+	//æ•Œæœºç‚¸æ¯çš„éŸ³æ•ˆ enemy1_down.mp3 enemy2_down.mp3 enemy3_down.mp3
 	EFFECT_TYPE_ENEMY1_DOWN,
 	EFFECT_TYPE_ENEMY2_DOWN,
 	EFFECT_TYPE_ENEMY3_DOWN,
-	//ÓÎÏ·½áÊø game_over.mp3
+	//æ¸¸æˆç»“æŸ game_over.mp3
 	EFFECT_TYPE_GAME_OVER,
-	//»ñµÃUFOµÀ¾ß get_double_laser.mp3
+	//è·å¾—UFOé“å…· get_double_laser.mp3
 	EFFECT_TYPE_GET_UFO,
-	//µÀ¾ß³öÀ´Ê±ºòµÄÒôĞ§ out_porp.mp3
+	//é“å…·å‡ºæ¥æ—¶å€™çš„éŸ³æ•ˆ out_porp.mp3
 	EFFECT_TYPE_OUT_PORP
 };
 
-//ÉùÒô´¦ÀíÀà
+//å£°éŸ³å¤„ç†ç±»
 class Sound
 {
 public:
@@ -44,11 +44,11 @@ public:
 private:
 	static Sound * m_sound;
 	Sound();
-	//¸ù¾İ²»Í¬µÄÒôÀÖºÍÒôĞ§ÀàĞÍ»ñµÃÏàÓ¦Æ½Ì¨ÏÂµÄÎÄ¼ş
+	//æ ¹æ®ä¸åŒçš„éŸ³ä¹å’ŒéŸ³æ•ˆç±»å‹è·å¾—ç›¸åº”å¹³å°ä¸‹çš„æ–‡ä»¶
 	char * getMusic(MUSIC_TYPE type);
 	char * getEffect(EFFECT_TYPE type);
 public:
-	//ÉùÒôµÄ²¥·ÅºÍÍ£Ö¹
+	//å£°éŸ³çš„æ’­æ”¾å’Œåœæ­¢
 	void playEffect(EFFECT_TYPE type);
 	void playBgMusic(MUSIC_TYPE type);
 };

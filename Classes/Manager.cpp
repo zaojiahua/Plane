@@ -2,7 +2,7 @@
 
 Manager * Manager::m_manager = NULL;
 
-//ÔÚ¹¹Ôìº¯ÊıµÄ³õÊ¼»¯ÁĞ±íÖĞ³õÊ¼»¯Êı×é
+//åœ¨æ„é€ å‡½æ•°çš„åˆå§‹åŒ–åˆ—è¡¨ä¸­åˆå§‹åŒ–æ•°ç»„
 Manager::Manager() : m_enemyVector(),m_bulletVector()
 {
 }

@@ -1,12 +1,12 @@
 #ifndef _GAME_OVER_H_
 #define _GAME_OVER_H_
 #include "cocos2d.h"
-//¿ªÊ¼ÓÎÏ·³¡¾°
+//å¼€å§‹æ¸¸æˆåœºæ™¯
 #include "StartGame.h"
 
 USING_NS_CC;
 
-//ÓÎÏ·½áÊø³¡¾°
+//æ¸¸æˆç»“æŸåœºæ™¯
 class GameOver : public Layer
 {
 public:
@@ -17,7 +17,7 @@ public:
 	bool init();
 	CREATE_FUNC(GameOver);
 public:
-	//»Øµ½ÓÎÏ·µÄ»Øµ÷º¯Êı
+	//å›åˆ°æ¸¸æˆçš„å›è°ƒå‡½æ•°
 	void backGame(Ref * ref);
 };
 

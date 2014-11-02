@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-//ufoºÍÕ¨µ¯Àà£¬¼Ì³Ğ×Ôsprite
+//ufoå’Œç‚¸å¼¹ç±»ï¼Œç»§æ‰¿è‡ªsprite
 class Ufo : public Sprite
 {
 public:
@@ -14,10 +14,10 @@ public:
 	bool init();
 	CREATE_FUNC(Ufo);
 public:
-	//¸ù¾İ²»Í¬µÄÎÆÀí³õÊ¼»¯²»Í¬µÄufoºÍÕ¨µ¯
+	//æ ¹æ®ä¸åŒçš„çº¹ç†åˆå§‹åŒ–ä¸åŒçš„ufoå’Œç‚¸å¼¹
 	void initUfo(std::string name);
 	int getRandomNumber(int start,int end);
-	//°üº¬Ãû×ÖµÄÊôĞÔ
+	//åŒ…å«åå­—çš„å±æ€§
 	CC_SYNTHESIZE_READONLY(std::string,m_name,Name);
 };
 

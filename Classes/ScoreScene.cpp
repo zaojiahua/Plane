@@ -6,7 +6,7 @@ ScoreScene::ScoreScene(void)
 
 ScoreScene::~ScoreScene(void)
 {
-	//ÔÚÎö¹¹º¯ÊıÖĞÒÆ³ı¼àÌıÆ÷£¬ÕâÀï´«µİµÄ²ÎÊıthis¾ÍÊÇÌí¼Ó¼àÌıÆ÷µ½ÊÂ¼ş·Ö·¢Æ÷ÖĞµÄthis
+	//åœ¨ææ„å‡½æ•°ä¸­ç§»é™¤ç›‘å¬å™¨ï¼Œè¿™é‡Œä¼ é€’çš„å‚æ•°thiså°±æ˜¯æ·»åŠ ç›‘å¬å™¨åˆ°äº‹ä»¶åˆ†å‘å™¨ä¸­çš„this
 	_eventDispatcher->removeEventListenersForTarget(this);
 }
 
@@ -25,40 +25,40 @@ bool ScoreScene::init()
 
 	size = Director::getInstance()->getWinSize();
 
-	//Ìí¼Ó±³¾°Í¼Æ¬
+	//æ·»åŠ èƒŒæ™¯å›¾ç‰‡
 	auto background = Sprite::createWithSpriteFrameName("background.png");
 	background->setPosition(Point(size.width/2,size.height/2));
 	this->addChild(background);
 
-	//´´½¨tableView²¢ÉèÖÃÒ»Ğ©²ÎÊı
+	//åˆ›å»ºtableViewå¹¶è®¾ç½®ä¸€äº›å‚æ•°
 	auto tableView = TableView::create(this,Size(size.width,size.height*0.6));
-	//ÉèÖÃ»¬¶¯·½Ïò
+	//è®¾ç½®æ»‘åŠ¨æ–¹å‘
 	tableView->setDirection(ScrollView::Direction::VERTICAL);
-	//ÉèÖÃTableViewDelegate
+	//è®¾ç½®TableViewDelegate
 	tableView->setDelegate(this);
-	//indexµÄ´óĞ¡ÊÇ´ÓÉÏµ½ÏÂÒÀ´ÎÔö´ó
+	//indexçš„å¤§å°æ˜¯ä»ä¸Šåˆ°ä¸‹ä¾æ¬¡å¢å¤§
 	tableView->setVerticalFillOrder(TableView::VerticalFillOrder::TOP_DOWN);
-	//ÓÃµ±Ç°µÄÅäÖÃË¢ĞÂcell
+	//ç”¨å½“å‰çš„é…ç½®åˆ·æ–°cell
 	tableView->reloadData();
 	this->addChild(tableView);
 
-	//ÅÅĞĞ°ñ
+	//æ’è¡Œæ¦œ
 	auto rank = Sprite::createWithSpriteFrameName("shoot_copyright.png");
 	rank->setPosition(Point(size.width/2,size.height-rank->getContentSize().height));
 	this->addChild(rank);
 
-	//ÅÅÃû
+	//æ’å
 	auto rankNum = Label::createWithTTF("rank","font/arial.ttf",40);
 	rankNum->setColor(Color3B(100,100,100));
 	rankNum->setPosition(Point(size.width*0.4,size.height*0.7));
 	this->addChild(rankNum);
-	//µÃ·Ö
+	//å¾—åˆ†
 	auto rankScore = Label::createWithTTF("score","font/arial.ttf",40);
 	rankScore->setPosition(Point(size.width*0.8,size.height*0.7));
 	rankScore->setColor(Color3B(100,100,100));
 	this->addChild(rankScore);
 
-	//¶ÔÓÃ»§·µ»Ø¼üµÄÏìÓ¦
+	//å¯¹ç”¨æˆ·è¿”å›é”®çš„å“åº”
 	auto listener = EventListenerKeyboard::create();
 	listener->onKeyReleased = CC_CALLBACK_2(ScoreScene::onKeyReleased,this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener,this);
@@ -66,63 +66,63 @@ bool ScoreScene::init()
 	return true;
 }
 
-//¶Ô·µ»Ø¼üµÄÏìÓ¦
+//å¯¹è¿”å›é”®çš„å“åº”
 void ScoreScene::onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent)
 {
 	if(keyCode == EventKeyboard::KeyCode::KEY_BACKSPACE)
-		//½«¿ªÊ¼³¡¾°µ¯³ö
+		//å°†å¼€å§‹åœºæ™¯å¼¹å‡º
 		Director::getInstance()->popScene();
 }
 
-//Õâ¸öº¯Êı±È½Ï¹Ø¼ü£¬ÊÇÓÃÀ´ÉèÖÃÃ¿¸öcellµÄÄÚÈİµÄ
+//è¿™ä¸ªå‡½æ•°æ¯”è¾ƒå…³é”®ï¼Œæ˜¯ç”¨æ¥è®¾ç½®æ¯ä¸ªcellçš„å†…å®¹çš„
 TableViewCell * ScoreScene::tableCellAtIndex(TableView * table,ssize_t index)
 {
-	//ÉèÖÃÃ¿Ìõ¼ÇÂ¼Ç°±ßµÄÎÄ±¾ÄÚÈİ
+	//è®¾ç½®æ¯æ¡è®°å½•å‰è¾¹çš„æ–‡æœ¬å†…å®¹
 	auto index_text = __String::createWithFormat("%ld",index+1);
 
-	//dequeuecellÕâ¸öº¯ÊıÊÇ»ñµÃÒ»¸ö¿ÉÓÃµÄcell£¬ÒòÎªÈç¹ûÎÒÃÇÃ»Ôö¼ÓÒ»Ìõ·ÖÊı¼ÇÂ¼¾Í´´½¨Ò»¸öcell£¬¿ÉÏë¶øÖªÈç¹û
-	//·ÖÊı¼ÇÂ¼ºÜ¶àµÄ»°£¬cell²»ÊÇ³¬¼¶µÄ¶àÁËÂğ£¬Õâ¸öÊ±ºòÄÚ´æÕ¼ÓÃ¾Í»áºÜ´ó£¬¶øÕâ¸öº¯ÊıµÄ¹¦ÄÜÊÇ°ÑÄÇĞ©Ã»ÓĞäÖÈ¾µÄ
-	//cellÄÃ¹ıÀ´£¬ÕâÑùµÄ»°¾Í¼õĞ¡ÁËÄÚ´æµÄÏûºÄ
+	//dequeuecellè¿™ä¸ªå‡½æ•°æ˜¯è·å¾—ä¸€ä¸ªå¯ç”¨çš„cellï¼Œå› ä¸ºå¦‚æœæˆ‘ä»¬æ²¡å¢åŠ ä¸€æ¡åˆ†æ•°è®°å½•å°±åˆ›å»ºä¸€ä¸ªcellï¼Œå¯æƒ³è€ŒçŸ¥å¦‚æœ
+	//åˆ†æ•°è®°å½•å¾ˆå¤šçš„è¯ï¼Œcellä¸æ˜¯è¶…çº§çš„å¤šäº†å—ï¼Œè¿™ä¸ªæ—¶å€™å†…å­˜å ç”¨å°±ä¼šå¾ˆå¤§ï¼Œè€Œè¿™ä¸ªå‡½æ•°çš„åŠŸèƒ½æ˜¯æŠŠé‚£äº›æ²¡æœ‰æ¸²æŸ“çš„
+	//cellæ‹¿è¿‡æ¥ï¼Œè¿™æ ·çš„è¯å°±å‡å°äº†å†…å­˜çš„æ¶ˆè€—
 	TableViewCell * cell = table->dequeueCell();
 	if(cell == NULL)
 	{
-		//´´½¨Ò»¸öcell
+		//åˆ›å»ºä¸€ä¸ªcell
 		cell = new TableViewCell();
 		cell->autorelease();
 
-		//´´½¨ÏÔÊ¾ÅÅÃûµÄÎÄ±¾ĞÅÏ¢
+		//åˆ›å»ºæ˜¾ç¤ºæ’åçš„æ–‡æœ¬ä¿¡æ¯
 		auto text = Label::createWithTTF(index_text->getCString(),"font/arial.ttf",24);
 		text->setTag(1024);
 		text->setColor(Color3B(100,100,100));
-		//ÎÄ±¾ĞÅÏ¢ÔÚcellµÄÖĞ¼ä
+		//æ–‡æœ¬ä¿¡æ¯åœ¨cellçš„ä¸­é—´
 		text->setPosition(Point(size.width*0.4,size.height*0.025));
 		cell->addChild(text);
 
-		//ÏÔÊ¾ÓÃ»§µÃ·ÖµÄÎÄ±¾ĞÅÏ¢
+		//æ˜¾ç¤ºç”¨æˆ·å¾—åˆ†çš„æ–‡æœ¬ä¿¡æ¯
 		auto index_score = __String::createWithFormat("%d",index);
-		//¸ù¾İindexÖµ»ñµÃµÃ·ÖµÄÎÄ±¾£¬ÒòÎªÕâ¸öÊ±ºòµÄscoreÊÇintĞÍ£¬ËùÒÔ»¹ĞèÒª×ª»¯Ò»ÏÂÀàĞÍ£¬ÕâÀïÓĞµãÂé·³
+		//æ ¹æ®indexå€¼è·å¾—å¾—åˆ†çš„æ–‡æœ¬ï¼Œå› ä¸ºè¿™ä¸ªæ—¶å€™çš„scoreæ˜¯intå‹ï¼Œæ‰€ä»¥è¿˜éœ€è¦è½¬åŒ–ä¸€ä¸‹ç±»å‹ï¼Œè¿™é‡Œæœ‰ç‚¹éº»çƒ¦
 		int i_score = UserDefault::getInstance()->getIntegerForKey(index_score->getCString());
 		auto * str = __String::createWithFormat("%d",i_score);
 		auto score = Label::createWithTTF(
 			str->getCString(),"font/arial.ttf",24);
 		score->setTag(2048);
-		//ÉèÖÃ×ø±ê
+		//è®¾ç½®åæ ‡
 		score->setPosition(Point(size.width*0.8,size.height*0.025));
 		score->setColor(Color3B(100,100,100));
 		cell->addChild(score);
 
 	}
-	//ÕâÀï»ñµÃµÄcellÊÇÔ­À´µÄcell£¬ËùÒÔÔ­À´cellµÄÎÄ±¾ĞÅÏ¢µÈ»¹ÊÇÔ­À´µÄ£¬ËùÒÔÒª×öÒ»Ğ©¸Ä±ä
+	//è¿™é‡Œè·å¾—çš„cellæ˜¯åŸæ¥çš„cellï¼Œæ‰€ä»¥åŸæ¥cellçš„æ–‡æœ¬ä¿¡æ¯ç­‰è¿˜æ˜¯åŸæ¥çš„ï¼Œæ‰€ä»¥è¦åšä¸€äº›æ”¹å˜
 	else
 	{
-		//Í¨¹ıtagÖµ»ñµÃÎÄ±¾£¬²¢ÇÒ¸Ä±ä£¬ËäÈ»LabelTTFµ÷ÓÃsetStringº¯Êı²»ºÃ£¬µ«ÊÇÕâÀïÎªÁËÊ¡ÊÂ¾ÍÕâÃ´ÓÃ°É
+		//é€šè¿‡tagå€¼è·å¾—æ–‡æœ¬ï¼Œå¹¶ä¸”æ”¹å˜ï¼Œè™½ç„¶LabelTTFè°ƒç”¨setStringå‡½æ•°ä¸å¥½ï¼Œä½†æ˜¯è¿™é‡Œä¸ºäº†çœäº‹å°±è¿™ä¹ˆç”¨å§
 		auto text = (Label *)cell->getChildByTag(1024);
 		text->setString(index_text->getCString());
 
-		//¸Ä±ä·ÖÊı
+		//æ”¹å˜åˆ†æ•°
 		auto * score = (Label *)cell->getChildByTag(2048);
 		auto * index_score = __String::createWithFormat("%d",index);
-		//¸ù¾İindexÖµ»ñµÃµÃ·ÖµÄÎÄ±¾£¬ÒòÎªÕâ¸öÊ±ºòµÄscoreÊÇintĞÍ£¬ËùÒÔ»¹ĞèÒª×ª»¯Ò»ÏÂÀàĞÍ£¬ÕâÀïÓĞµãÂé·³
+		//æ ¹æ®indexå€¼è·å¾—å¾—åˆ†çš„æ–‡æœ¬ï¼Œå› ä¸ºè¿™ä¸ªæ—¶å€™çš„scoreæ˜¯intå‹ï¼Œæ‰€ä»¥è¿˜éœ€è¦è½¬åŒ–ä¸€ä¸‹ç±»å‹ï¼Œè¿™é‡Œæœ‰ç‚¹éº»çƒ¦
 		int i_score = UserDefault::getInstance()->getIntegerForKey(index_score->getCString());
 		auto * str = __String::createWithFormat("%d",i_score);
 		score->setString(str->getCString());
@@ -139,7 +139,7 @@ TableViewCell * ScoreScene::tableCellAtIndex(TableView * table,ssize_t index)
 		Sprite * sprite;
 		switch(index)
 		{
-			//´ú±íµÄÊÇ¹Ú¾ü
+			//ä»£è¡¨çš„æ˜¯å† å†›
 		case 0:
 			sprite = Sprite::create("gold.png");
 			break;
@@ -158,16 +158,16 @@ TableViewCell * ScoreScene::tableCellAtIndex(TableView * table,ssize_t index)
 	return cell;
 }
 
-//Õâ¸öº¯ÊıÊÇÓÃÀ´ÉèÖÃÃ¿¸öcellµÄ´óĞ¡µÄ
+//è¿™ä¸ªå‡½æ•°æ˜¯ç”¨æ¥è®¾ç½®æ¯ä¸ªcellçš„å¤§å°çš„
 Size ScoreScene::tableCellSizeForIndex(TableView * table,ssize_t index)
 {
 	return Size(size.width,size.height*0.05);
 }
 
-//Õâ¸öº¯ÊıÊÇÓÃÀ´ÉèÖÃcellµÄ¸öÊıµÄ
+//è¿™ä¸ªå‡½æ•°æ˜¯ç”¨æ¥è®¾ç½®cellçš„ä¸ªæ•°çš„
 ssize_t ScoreScene::numberOfCellsInTableView(TableView * table)
 {
-	//¸öÊıÊÇ´ÓXMLÎÄ¼şÖĞ¶ÁÈ¡µ½µÄ£¬ÓĞ¶àÉÙÌõ¼ÇÂ¼£¬¾ÍÉèÖÃ¶àÉÙ¸öcell£¬Èç¹û¸Õ¿ªÊ¼Ã»ÓĞcountÕâ¸ö×Ö¶Î£¬¾Í·µ»Ø0
+	//ä¸ªæ•°æ˜¯ä»XMLæ–‡ä»¶ä¸­è¯»å–åˆ°çš„ï¼Œæœ‰å¤šå°‘æ¡è®°å½•ï¼Œå°±è®¾ç½®å¤šå°‘ä¸ªcellï¼Œå¦‚æœåˆšå¼€å§‹æ²¡æœ‰countè¿™ä¸ªå­—æ®µï¼Œå°±è¿”å›0
 	int count = UserDefault::getInstance()->getIntegerForKey("count",0);
 
 	return count;

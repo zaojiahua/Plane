@@ -1,7 +1,7 @@
 #ifndef _PAUSE_H_
 #define _PAUSE_H_
 #include "cocos2d.h"
-#include "Sound\Sound.h"
+#include "Sound.h"
 
 USING_NS_CC;
 

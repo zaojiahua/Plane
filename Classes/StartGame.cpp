@@ -2,14 +2,14 @@
 
 StartGame::StartGame(void)
 {
-	//²¥·Å±³¾°ÒôÀÖ
+	//æ’­æ”¾èƒŒæ™¯éŸ³ä¹
 	m_sound = Sound::getInstance();
 	m_sound->playBgMusic(MUSIC_TYPE_BACKGROUND);
 }
 
 StartGame::~StartGame(void)
 {
-	//ÒÆ³ı¼àÌıÆ÷
+	//ç§»é™¤ç›‘å¬å™¨
 	Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
 }
 
@@ -22,10 +22,10 @@ Scene * StartGame::createScene()
 	return scene;
 }
 
-//¼ÇµÃĞ¶ÔØ×ÊÔ´
+//è®°å¾—å¸è½½èµ„æº
 void StartGame::onExit()
 {
-	//¼Ç×¡¸¸ÀàµÄ·½·¨ÒªÏÈµ÷ÓÃ
+	//è®°ä½çˆ¶ç±»çš„æ–¹æ³•è¦å…ˆè°ƒç”¨
 	Layer::onExit();
 	Director::getInstance()->getTextureCache()->removeUnusedTextures();
 }
@@ -37,26 +37,26 @@ bool StartGame::init()
 
 	auto size = Director::getInstance()->getWinSize();
 
-	//¼ÓÔØ»º´æÎÄ¼ş
+	//åŠ è½½ç¼“å­˜æ–‡ä»¶
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("ui.plist");
 
-	//Ê¹ÓÃ»º´æÎÄ¼ş´´½¨¾«Áé
+	//ä½¿ç”¨ç¼“å­˜æ–‡ä»¶åˆ›å»ºç²¾çµ
 	auto background = Sprite::createWithSpriteFrameName("background.png");
 	background->setPosition(Point(size.width/2,size.height/2));
 	this->addChild(background);
 
-	//ÉèÖÃlogo
+	//è®¾ç½®logo
 	auto logo = Sprite::createWithSpriteFrameName("shoot_copyright.png");
 	logo->setPosition(Point(size.width/2,size.height-logo->getContentSize().height));
-	//ÉèÖÃÍ¸Ã÷¶ÈÊÇ0
+	//è®¾ç½®é€æ˜åº¦æ˜¯0
 	logo->setOpacity(0);
 	this->addChild(logo);
 
-	//ÉèÖÃlogoµÄ¶¯×÷
+	//è®¾ç½®logoçš„åŠ¨ä½œ
 	auto fade = FadeIn::create(1.0f);
 	logo->runAction(fade);
 
-	//ÉèÖÃ¿ªÊ¼ÓÎÏ·³¡¾°´¦µÄ¶¯»­
+	//è®¾ç½®å¼€å§‹æ¸¸æˆåœºæ™¯å¤„çš„åŠ¨ç”»
 	auto animation = Animation::create();
 	for(int i=0;i<4;i++)
 	{
@@ -66,30 +66,30 @@ bool StartGame::init()
 	}
 	animation->setDelayPerUnit(0.5f);
 	animation->setLoops(-1);
-	//Ö¸¶¨µÚÒ»Ö¡Ö´ĞĞloading¶¯»­
+	//æŒ‡å®šç¬¬ä¸€å¸§æ‰§è¡ŒloadingåŠ¨ç”»
 	auto sprite = Sprite::createWithSpriteFrameName("game_loading1.png");
 	sprite->setPosition(size.width/2,size.height*0.6);
 	this->addChild(sprite);
-	//¶¯×÷
+	//åŠ¨ä½œ
 	auto animate = Animate::create(animation);
 	sprite->runAction(animate);
 
-	//´ÓxmlÎÄ¼şÖĞ¶ÁÈ¡ÖĞÎÄÏÔÊ¾³öÀ´
+	//ä»xmlæ–‡ä»¶ä¸­è¯»å–ä¸­æ–‡æ˜¾ç¤ºå‡ºæ¥
 	auto dictionary = Dictionary::createWithContentsOfFile("font/text.xml");
 	
-	//Ìí¼ÓÒ»¸öÓÎÏ·¿ªÊ¼°´Å¥
+	//æ·»åŠ ä¸€ä¸ªæ¸¸æˆå¼€å§‹æŒ‰é’®
 	auto playText = Label::createWithTTF(((__String *)(dictionary->objectForKey("play")))->getCString(),
 		"font/DFPShaoNvW5-GB.ttf",40);
 	playText->setColor(Color3B(100,100,100));
 	auto playMenu = MenuItemLabel::create(playText,CC_CALLBACK_1(StartGame::play,this));
 
-	//Ìí¼Ó·ÖÊı°ñ°´Å¥
+	//æ·»åŠ åˆ†æ•°æ¦œæŒ‰é’®
 	auto scoreText = Label::createWithTTF(((__String *)(dictionary->objectForKey("scoreMenu")))->getCString(),
 		"font/DFPShaoNvW5-GB.ttf",40);
 	scoreText->setColor(Color3B(100,100,100));
 	auto scoreMenu = MenuItemLabel::create(scoreText,CC_CALLBACK_1(StartGame::scoreScene,this));
 
-	//Ìí¼Ó¹ØÓÚ×÷Õß²Ëµ¥
+	//æ·»åŠ å…³äºä½œè€…èœå•
 	auto authorText = Label::createWithTTF(((__String *)(dictionary->objectForKey("aboutMe")))->getCString(),
 		"font/DFPShaoNvW5-GB.ttf",40);
 	authorText->setColor(Color3B(100,100,100));
@@ -100,40 +100,40 @@ bool StartGame::init()
 	menu->setPosition(size.width/2,size.height*0.3);
 	this->addChild(menu);
 
-	//¶ÔÊÖ»ú·µ»Ø¼üµÄ¼àÌı
+	//å¯¹æ‰‹æœºè¿”å›é”®çš„ç›‘å¬
 	m_listener = EventListenerKeyboard::create();
-	//ºÍ»Øµ÷º¯Êı°ó¶¨
+	//å’Œå›è°ƒå‡½æ•°ç»‘å®š
 	m_listener->onKeyReleased = CC_CALLBACK_2(StartGame::onKeyReleased,this);
-	//Ìí¼Óµ½ÊÂ¼ş·Ö·¢Æ÷ÖĞ
+	//æ·»åŠ åˆ°äº‹ä»¶åˆ†å‘å™¨ä¸­
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener,this);
 	
 	return true;
 }
-//·ÖÊı°ñÏìÓ¦º¯Êı
+//åˆ†æ•°æ¦œå“åº”å‡½æ•°
 void StartGame::scoreScene(Ref * ref)
 {
 	m_sound->playEffect(EFFECT_TYPE_BUTTON);
 	Director::getInstance()->pushScene(ScoreScene::createScene());
 }
-//¹ØÓÚ×÷ÕßÏìÓ¦º¯Êı
+//å…³äºä½œè€…å“åº”å‡½æ•°
 void StartGame::aboutMe(Ref * ref)
 {
 	m_sound->playEffect(EFFECT_TYPE_BUTTON);
 	Director::getInstance()->pushScene(AboutMe::createScene());
 }
 
-//¶Ôandroid·µ»Ø¼üµÄÏìÓ¦º¯Êı
+//å¯¹androidè¿”å›é”®çš„å“åº”å‡½æ•°
 void StartGame::onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent)
 {
 	m_sound->playEffect(EFFECT_TYPE_BUTTON);
 	m_sound->freeInstance();
 	Director::getInstance()->end();
 }
-//¿ªÊ¼ÓÎÏ·°´Å¥µÄÏìÓ¦º¯Êı
+//å¼€å§‹æ¸¸æˆæŒ‰é’®çš„å“åº”å‡½æ•°
 void StartGame::play(Ref * ref)
 {
 	m_sound->playEffect(EFFECT_TYPE_BUTTON);
-	//ÇĞ»»³¡¾°
+	//åˆ‡æ¢åœºæ™¯
 	Director::getInstance()->replaceScene(TransitionPageTurn::create(1.0f,MainGame::createScene(),false));
 }
 

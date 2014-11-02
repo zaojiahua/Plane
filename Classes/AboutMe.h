@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-//¹ØÓÚĞ¡Ëş
+//å…³äºå°å¡”
 class AboutMe : public Layer
 {
 public:

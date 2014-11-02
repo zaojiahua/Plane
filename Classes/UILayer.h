@@ -1,17 +1,17 @@
 #ifndef _UILAYER_H_
 #define _UILAYER_H_
 #include "cocos2d.h"
-//ÔİÍ£³¡¾°
+//æš‚åœåœºæ™¯
 #include "Pause.h"
-//Íæ¼Ò·ÖÊı²Ù×÷Àà
-#include "SaveData\SaveData.h"
+//ç©å®¶åˆ†æ•°æ“ä½œç±»
+#include "SaveData.h"
 #include "SimpleAudioEngine.h"
 
 using namespace CocosDenshion;
 
 USING_NS_CC;
 
-//UI²ã
+//UIå±‚
 class UILayer : public Layer
 {
 public:
@@ -21,12 +21,12 @@ public:
 	bool init();
 	CREATE_FUNC(UILayer);
 public:
-	//°´Å¥µÄ»Øµ÷º¯Êı
+	//æŒ‰é’®çš„å›è°ƒå‡½æ•°
 	void menuCallback(Ref * ref);
-	//¶ÔÍæ¼Ò·ÖÊı²Ù×÷µÄ³ÉÔ±±äÁ¿
+	//å¯¹ç©å®¶åˆ†æ•°æ“ä½œçš„æˆå‘˜å˜é‡
 	CC_SYNTHESIZE_READONLY(SaveData *,m_saveData,SaveData);
 	void update(float tm);
-	//½ØÍ¼¹¦ÄÜ
+	//æˆªå›¾åŠŸèƒ½
 	void screenShoot();
 	MenuItemToggle * getMenu(){return menuToggle;};
 private:

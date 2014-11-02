@@ -1,13 +1,13 @@
 #ifndef _SCORE_SCENE_H_
 #define _SCORE_SCENE_H_
 #include "cocos2d.h"
-//Ê¹ÓÃtableview±ØĞë°üº¬À©Õ¹¿â
+//ä½¿ç”¨tableviewå¿…é¡»åŒ…å«æ‰©å±•åº“
 #include "cocos-ext.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
 
-//·ÖÊı°ñ³¡¾°£¬Ê¹ÓÃtableview±ØĞë¼Ì³ĞÒÔÏÂµÄÀà
+//åˆ†æ•°æ¦œåœºæ™¯ï¼Œä½¿ç”¨tableviewå¿…é¡»ç»§æ‰¿ä»¥ä¸‹çš„ç±»
 class ScoreScene : public Layer,public TableViewDataSource,public TableViewDelegate
 {
 public:
@@ -18,21 +18,21 @@ public:
 	bool init();
 	CREATE_FUNC(ScoreScene);
 public:
-	//ÊµÏÖÉÏÊö½Ó¿ÚĞèÒªÊµÏÖµÄĞéº¯ÊıÈçÏÂ£¬ÕâÀïÓĞ·Ç³£ÖØÒªµÄÒ»µã¾ÍÊÇº¯ÊıµÄ²ÎÊıindexÔ­À´2.xµÄ°æ±¾ÀàĞÍÎª
-	//unsigned int¶øÏÖÔÚ¸ÄÎªÁËssize_tÀàĞÍ£¬±ØĞëĞ´Õâ¸öÀàĞÍ£¬ÓÃÔ­À´µÄÀàĞÍ»á³öÏÖ´íÎó£¬±¾ÈË¾ÍÊÇÒòÎªÕâ¸ö´íÎó
-	//µ¢ÎóÁËºÜ¶àµÄÊ±¼ä
-	void tableCellTouched(TableView *table,TableViewCell * cell){}; //ÕâÀïÊÇÉèÖÃµ±ÎÒÃÇµã»÷Ã¿¸öcellµÄÊ±ºò´¥·¢µÄº¯Êı£¬ÕâÀïÎÒ°ÑËüÖÃÎª¿ÕµÄÊµÏÖ£¬ÒòÎªÎÒÃÇÖ»ÊÇĞèÒª¶ÁÈ¡·ÖÊıµÄ¼ÇÂ¼
+	//å®ç°ä¸Šè¿°æ¥å£éœ€è¦å®ç°çš„è™šå‡½æ•°å¦‚ä¸‹ï¼Œè¿™é‡Œæœ‰éå¸¸é‡è¦çš„ä¸€ç‚¹å°±æ˜¯å‡½æ•°çš„å‚æ•°indexåŸæ¥2.xçš„ç‰ˆæœ¬ç±»å‹ä¸º
+	//unsigned intè€Œç°åœ¨æ”¹ä¸ºäº†ssize_tç±»å‹ï¼Œå¿…é¡»å†™è¿™ä¸ªç±»å‹ï¼Œç”¨åŸæ¥çš„ç±»å‹ä¼šå‡ºç°é”™è¯¯ï¼Œæœ¬äººå°±æ˜¯å› ä¸ºè¿™ä¸ªé”™è¯¯
+	//è€½è¯¯äº†å¾ˆå¤šçš„æ—¶é—´
+	void tableCellTouched(TableView *table,TableViewCell * cell){}; //è¿™é‡Œæ˜¯è®¾ç½®å½“æˆ‘ä»¬ç‚¹å‡»æ¯ä¸ªcellçš„æ—¶å€™è§¦å‘çš„å‡½æ•°ï¼Œè¿™é‡Œæˆ‘æŠŠå®ƒç½®ä¸ºç©ºçš„å®ç°ï¼Œå› ä¸ºæˆ‘ä»¬åªæ˜¯éœ€è¦è¯»å–åˆ†æ•°çš„è®°å½•
 	TableViewCell * tableCellAtIndex(TableView * table,ssize_t index);
 	Size tableCellSizeForIndex(TableView * table,ssize_t index);
-	//3.0µÄ·µ»ØÖµÓĞËù²»Í¬
+	//3.0çš„è¿”å›å€¼æœ‰æ‰€ä¸åŒ
 	ssize_t numberOfCellsInTableView(TableView * table);
-	//¼Ì³ĞScrollViewDelegate½Ó¿ÚĞèÒª¸²Ğ´µÄ·½·¨£¬ÕâÀï°Ñ·½·¨µÄÊµÏÖÁô¿Õ
+	//ç»§æ‰¿ScrollViewDelegateæ¥å£éœ€è¦è¦†å†™çš„æ–¹æ³•ï¼Œè¿™é‡ŒæŠŠæ–¹æ³•çš„å®ç°ç•™ç©º
 	void scrollViewDidScroll(ScrollView * ){};
 	void scrollViewDidZoom(ScrollView *){};
-	//¶Ôandroid·µ»Ø¼üµÄÏìÓ¦
+	//å¯¹androidè¿”å›é”®çš„å“åº”
 	void onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent);
 private:
-	//Éè±¸³ß´ç
+	//è®¾å¤‡å°ºå¯¸
 	Size size;
 };
 

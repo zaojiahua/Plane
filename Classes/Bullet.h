@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-//×Óµ¯Àà£¬¼Ì³Ğ×ÔSprite
+//å­å¼¹ç±»ï¼Œç»§æ‰¿è‡ªSprite
 class Bullet : public Sprite
 {
 public:
@@ -15,12 +15,12 @@ public:
 	CREATE_FUNC(Bullet);
 	void onEnterTransitionDidFinish();
 public:
-	//³õÊ¼»¯×Óµ¯
+	//åˆå§‹åŒ–å­å¼¹
 	void initBullet(std::string name);
-	//×Óµ¯ÒÆ¶¯
+	//å­å¼¹ç§»åŠ¨
 	void move(float tm);
 private:
-	//×Óµ¯ÒÆ¶¯µÄ¾àÀë
+	//å­å¼¹ç§»åŠ¨çš„è·ç¦»
 	enum {OFFSET = 200};
 };
 

@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-//µØÍ¼²ã
+//åœ°å›¾å±‚
 class Background : public Layer
 {
 public:
@@ -14,16 +14,16 @@ public:
 	bool init();
 	CREATE_FUNC(Background);
 public:
-	//¹ö¶¯µ×Í¿²ã
+	//æ»šåŠ¨åº•æ¶‚å±‚
 	void move(float tm);
 	void onEnterTransitionDidFinish();
 private:
-	//Á©ÕÅ±³¾°Í¼Æ¬
+	//ä¿©å¼ èƒŒæ™¯å›¾ç‰‡
 	Sprite * m_background_1;
 	Sprite * m_background_2;
-	//Éè±¸´óĞ¡
+	//è®¾å¤‡å¤§å°
 	Size m_size;
-	//±³¾°Í¼Æ¬ÒÆ¶¯µÄ´óĞ¡
+	//èƒŒæ™¯å›¾ç‰‡ç§»åŠ¨çš„å¤§å°
 	enum{OFFSET = 3};
 };
 

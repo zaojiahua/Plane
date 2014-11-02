@@ -18,28 +18,28 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if(!glview)
 	{
-		//¸ü¸ÄÒ»ÏÂ´°¿ÚµÄÃû×Ö
+		//æ›´æ”¹ä¸€ä¸‹çª—å£çš„åå­—
         glview = GLView::create("Plane By XiaoTa");
-		//ÉèÖÃ´°¿ÚµÄ´óÐ¡
-		glview->setFrameSize(400,600);
+		//è®¾ç½®çª—å£çš„å¤§å°
+		glview->setFrameSize(480,800);
         director->setOpenGLView(glview);
     }
 
-	//ÊÊÅä·½°¸
-	//getFrameSize()»ñµÃÊµ¼ÊÆÁÄ»µÄ´óÐ¡
+	//é€‚é…æ–¹æ¡ˆ
+	//getFrameSize()èŽ·å¾—å®žé™…å±å¹•çš„å¤§å°
 	 Size frameSize = glview->getFrameSize();
-	 //ÕâÌîÐ´µÄ¾ÍÊÇÒ»°ãÄã×÷Îª±³¾°Í¼Æ¬µÄÄÇÖÖÍ¼Æ¬µÄ´óÐ¡£¬ÊÊÅäµÄÔ­Àí¾ÍÊÇ·Åµ½ºÍËõÐ¡£¬¶øÒÔÊ²Ã´Îª²ÎÕÕ£¬µ±È»¾ÍÊÇ
-	 //ÒÔ×î´óµÄÄÇÕÅÍ¼Æ¬Îª²ÎÕÕ£¬Ê²Ã´Í¼Æ¬×î´ó£¬µ±È»ÊÇ±³¾°Í¼Æ¬ÁË£¬ÒÔºóÃÀ¹¤×öÍ¼µÄÊ±ºòÓÃµÄ¾ÍÊÇÒÔÏÂµÄÕâ¸ö³ß´ç
+	 //è¿™å¡«å†™çš„å°±æ˜¯ä¸€èˆ¬ä½ ä½œä¸ºèƒŒæ™¯å›¾ç‰‡çš„é‚£ç§å›¾ç‰‡çš„å¤§å°ï¼Œé€‚é…çš„åŽŸç†å°±æ˜¯æ”¾åˆ°å’Œç¼©å°ï¼Œè€Œä»¥ä»€ä¹ˆä¸ºå‚ç…§ï¼Œå½“ç„¶å°±æ˜¯
+	 //ä»¥æœ€å¤§çš„é‚£å¼ å›¾ç‰‡ä¸ºå‚ç…§ï¼Œä»€ä¹ˆå›¾ç‰‡æœ€å¤§ï¼Œå½“ç„¶æ˜¯èƒŒæ™¯å›¾ç‰‡äº†ï¼Œä»¥åŽç¾Žå·¥åšå›¾çš„æ—¶å€™ç”¨çš„å°±æ˜¯ä»¥ä¸‹çš„è¿™ä¸ªå°ºå¯¸
 	 Size winSize=CCSize(480,852);
 
-	 //½«¿íºÍ¸ß×öÒ»¸ö±È£¬Í¨¹ýÕâ¸ö±È£¬À´¾ßÌåµÄµ÷ÕûÂß¼­·Ö±æÂÊµÄ´óÐ¡
+	 //å°†å®½å’Œé«˜åšä¸€ä¸ªæ¯”ï¼Œé€šè¿‡è¿™ä¸ªæ¯”ï¼Œæ¥å…·ä½“çš„è°ƒæ•´é€»è¾‘åˆ†è¾¨çŽ‡çš„å¤§å°
 	 float widthRate = frameSize.width/winSize.width;
 	 float heightRate = frameSize.height/winSize.height;
 
-	 //Èç¹ûÊÇifÖÐµÄÓï¾ä£¬ËµÃ÷Âß¼­µÄ¸ß¶ÈÓÐµã´óÁË£¬¾Í°ÑÂß¼­µÄ¸ßËõÐ¡µ½ºÍ¿í¶ÈÒ»ÑùµÄ±ÈÂÊ
+	 //å¦‚æžœæ˜¯ifä¸­çš„è¯­å¥ï¼Œè¯´æ˜Žé€»è¾‘çš„é«˜åº¦æœ‰ç‚¹å¤§äº†ï¼Œå°±æŠŠé€»è¾‘çš„é«˜ç¼©å°åˆ°å’Œå®½åº¦ä¸€æ ·çš„æ¯”çŽ‡
     if (widthRate > heightRate)
 	{
-		//Àï±ß´«ÈëµÄÇ°Á©¸ö²ÎÊý¾ÍÊÇÂß¼­·Ö±æÂÊµÄ´óÐ¡£¬Ò²¾ÍÊÇÍ¨¹ýgetWinSize()µÃµ½µÄ´óÐ¡
+		//é‡Œè¾¹ä¼ å…¥çš„å‰ä¿©ä¸ªå‚æ•°å°±æ˜¯é€»è¾‘åˆ†è¾¨çŽ‡çš„å¤§å°ï¼Œä¹Ÿå°±æ˜¯é€šè¿‡getWinSize()å¾—åˆ°çš„å¤§å°
 		glview->setDesignResolutionSize(winSize.width,
 			winSize.height*heightRate/widthRate, ResolutionPolicy::NO_BORDER);
 	}
@@ -49,11 +49,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
 			ResolutionPolicy::NO_BORDER);
 	}
 
-	//ÉèÖÃºÍÏÔÊ¾Ö¡ÂÊ
+	//è®¾ç½®å’Œæ˜¾ç¤ºå¸§çŽ‡
     //director->setDisplayStats(true);
     director->setAnimationInterval(1.0 / 60);
 
-	//´´½¨³¡¾°²¢ÇÒÔËÐÐ
+	//åˆ›å»ºåœºæ™¯å¹¶ä¸”è¿è¡Œ
     auto scene = StartGame::createScene();
     director->runWithScene(scene);
 

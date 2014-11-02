@@ -8,10 +8,10 @@ MainGame::MainGame(void)
 
 MainGame::~MainGame(void)
 {
-	//ÒÆ³ıÊÂ¼ş¼àÌıÆ÷
+	//ç§»é™¤äº‹ä»¶ç›‘å¬å™¨
 	Director::getInstance()->getEventDispatcher()->removeEventListener(m_listener);
 	Director::getInstance()->getEventDispatcher()->removeEventListener(m_touchListener);
-	//ÊÍ·Å¹ÜÀíÆ÷
+	//é‡Šæ”¾ç®¡ç†å™¨
 	Manager::freeInstance();
 }
 
@@ -24,10 +24,10 @@ Scene * MainGame::createScene()
 	return scene;
 }
 
-//¼ÇµÃĞ¶ÔØ×ÊÔ´
+//è®°å¾—å¸è½½èµ„æº
 void MainGame::onExit()
 {
-	//¼Ç×¡¸¸ÀàµÄ·½·¨ÒªÏÈµ÷ÓÃ
+	//è®°ä½çˆ¶ç±»çš„æ–¹æ³•è¦å…ˆè°ƒç”¨
 	Layer::onExit();
 	//SpriteFrameCache::getInstance()->removeSpriteFramesFromFile("shoot.plist");
 	Director::getInstance()->getTextureCache()->removeUnusedTextures();
@@ -40,52 +40,52 @@ bool MainGame::init()
 
 	m_size = Director::getInstance()->getWinSize();
 
-	//Ìí¼ÓµØÍ¼²ã
+	//æ·»åŠ åœ°å›¾å±‚
 	auto background = Background::create();
 	this->addChild(background);
 
-	//Ìí¼Óandroid·µ»Ø¼üµÄ¼àÌıÆ÷
+	//æ·»åŠ androidè¿”å›é”®çš„ç›‘å¬å™¨
 	m_listener = EventListenerKeyboard::create();
 	m_listener->onKeyReleased = CC_CALLBACK_2(MainGame::onKeyReleased,this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_listener,this);
 
-	//¼ÓÔØ¾«ÁéÖ¡»º´æ
+	//åŠ è½½ç²¾çµå¸§ç¼“å­˜
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("shoot.plist");
 
-	//Ìí¼ÓÍæ¼Ò·É»ú
+	//æ·»åŠ ç©å®¶é£æœº
 	m_player = Player::create();
 	m_player->setPosition(Point(m_size.width/2,m_size.height*0.2));
 	this->addChild(m_player);
 
-	//ÎªUFO³õÊ¼»¯
+	//ä¸ºUFOåˆå§‹åŒ–
 	this->m_ufo = NULL;
-	//×Óµ¯Ãû³ÆµÄ³õÊ¼»¯
+	//å­å¼¹åç§°çš„åˆå§‹åŒ–
 	this->m_bulletName = "bullet1.png";
 
-	//Ìí¼ÓUI²ã
+	//æ·»åŠ UIå±‚
 	m_ui = UILayer::create();
 	this->addChild(m_ui);
 
-	//µ¥µã´¥ÃşµÄ¼àÌıÆ÷
+	//å•ç‚¹è§¦æ‘¸çš„ç›‘å¬å™¨
 	m_touchListener = EventListenerTouchOneByOne::create();
 	m_touchListener->onTouchBegan = CC_CALLBACK_2(MainGame::onTouchBegan,this);
 	m_touchListener->onTouchMoved = CC_CALLBACK_2(MainGame::onTouchMoved,this);
-	//ÉèÖÃÍÌÊÉ´¥Ãş
+	//è®¾ç½®åå™¬è§¦æ‘¸
 	m_touchListener->setSwallowTouches(true);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_touchListener,this);
 
-	//³õÊ¼»¯Íæ¼Ò¼¶±ğ
+	//åˆå§‹åŒ–ç©å®¶çº§åˆ«
 	m_level = 0;
 
 	return true;
 }
 
-//³¡¾°ÇĞ»»Íê±Ïµ÷ÓÃ
+//åœºæ™¯åˆ‡æ¢å®Œæ¯•è°ƒç”¨
 void MainGame::onEnterTransitionDidFinish()
 {
-	//±ØĞëÏÈµ÷ÓÃ¸¸ÀàµÄº¯Êı
+	//å¿…é¡»å…ˆè°ƒç”¨çˆ¶ç±»çš„å‡½æ•°
 	Layer::onEnterTransitionDidFinish();
-	//Ìí¼ÓµĞ»ú£¬Ã¿ÃëÌí¼ÓÒ»¸ö
+	//æ·»åŠ æ•Œæœºï¼Œæ¯ç§’æ·»åŠ ä¸€ä¸ª
 	float tm = 1.0f;
 	if(m_level == 1)
 		tm = 0.8f;
@@ -96,20 +96,20 @@ void MainGame::onEnterTransitionDidFinish()
 	else if(m_level == 4)
 		tm = 0.3f;
 	this->schedule(SEL_SCHEDULE(&MainGame::addEnemy),tm);
-	//Ìí¼Ó×Óµ¯
+	//æ·»åŠ å­å¼¹
 	this->schedule(SEL_SCHEDULE(&MainGame::addBullet),0.1f);
-	//Ìí¼ÓUFOºÍÕ¨µ¯£¬Ã¿Ê®Ãë³öÏÖÒ»¸öUFO»òÕßÊÇÕ¨µ¯
+	//æ·»åŠ UFOå’Œç‚¸å¼¹ï¼Œæ¯åç§’å‡ºç°ä¸€ä¸ªUFOæˆ–è€…æ˜¯ç‚¸å¼¹
 	this->schedule(SEL_SCHEDULE(&MainGame::addUfo),10.0f);
-	//Åö×²¼ì²â
+	//ç¢°æ’æ£€æµ‹
 	this->schedule(SEL_SCHEDULE(&MainGame::isHitEnemy));
 }
 
-//Ìí¼ÓUFOºÍÕ¨µ¯
+//æ·»åŠ UFOå’Œç‚¸å¼¹
 void MainGame::addUfo(float tm)
 {
 	m_ufo = Ufo::create();
 	int num = CCRANDOM_0_1()*3+1;
-	//ÔÚ²»Í¬µÄ¸ÅÂÊÏÂÌí¼Ó²»Í¬µÄÎïÆ·
+	//åœ¨ä¸åŒçš„æ¦‚ç‡ä¸‹æ·»åŠ ä¸åŒçš„ç‰©å“
 	if(num == 1)
 	{
 		m_ufo->initUfo("ufo1.png");
@@ -122,47 +122,47 @@ void MainGame::addUfo(float tm)
 	{
 		m_ufo->initUfo("bomb.png");
 	}
-	//µÀ¾ß³öÏÖµÄÊ±ºòµÄÒôĞ§
+	//é“å…·å‡ºç°çš„æ—¶å€™çš„éŸ³æ•ˆ
 	Sound::getInstance()->playEffect(EFFECT_TYPE_OUT_PORP);
 	this->addChild(m_ufo);
 }
 
-//Åö×²¼ì²â
+//ç¢°æ’æ£€æµ‹
 void MainGame::isHitEnemy(float tm)
 {
-	/*×Óµ¯ºÍµĞ»úµÄÅö×²¼ì²â*/
+	/*å­å¼¹å’Œæ•Œæœºçš„ç¢°æ’æ£€æµ‹*/
 
-	//´Ó¹ÜÀíÆ÷ÖĞ»ñµÃ×Óµ¯ºÍµĞ»úµÄÊı×éÒıÓÃ
+	//ä»ç®¡ç†å™¨ä¸­è·å¾—å­å¼¹å’Œæ•Œæœºçš„æ•°ç»„å¼•ç”¨
 	auto & enemyVector = Manager::getInstance()->getEnemyVector();
 	auto & bulletVector = Manager::getInstance()->getBulletVector();
 	for(int i=enemyVector.size()-1;i>=0;i--)
 	{
-		//Èç¹ûµĞ»ú»ÙÃğ»á²¥·Å¶¯»­ÔİÊ±»¹²»»á´Ó¹ÜÀíÆ÷ÖĞÒÆ³ı£¬ËùÒÔÕâÀïÒªÅĞ¶ÏÒ»ÏÂÊÇ·ñÒÑ¾­»ÙÃğ
+		//å¦‚æœæ•Œæœºæ¯ç­ä¼šæ’­æ”¾åŠ¨ç”»æš‚æ—¶è¿˜ä¸ä¼šä»ç®¡ç†å™¨ä¸­ç§»é™¤ï¼Œæ‰€ä»¥è¿™é‡Œè¦åˆ¤æ–­ä¸€ä¸‹æ˜¯å¦å·²ç»æ¯ç­
 		if(enemyVector.at(i)->getHp() == 0)
 		{
-			//Èç¹ûÒÑ¾­»ÙÃğ¾Í²»Òª½øĞĞÅö×²¼ì²âÁË
+			//å¦‚æœå·²ç»æ¯ç­å°±ä¸è¦è¿›è¡Œç¢°æ’æ£€æµ‹äº†
 			continue;
 		}
-		//»ñµÃµĞ»úµÄrect
+		//è·å¾—æ•Œæœºçš„rect
 		auto rect = enemyVector.at(i)->getBoundingBox();
 		for(int j=bulletVector.size()-1;j>=0;j--)
 		{
-			//ÅĞ¶Ï×Óµ¯µÄÎ»ÖÃÊÇ·ñÔÚµĞ»úµÄrect·¶Î§ÄÚ£¬Èç¹ûÔÚ£¬ÔòÂú×ãÅö×²
+			//åˆ¤æ–­å­å¼¹çš„ä½ç½®æ˜¯å¦åœ¨æ•Œæœºçš„rectèŒƒå›´å†…ï¼Œå¦‚æœåœ¨ï¼Œåˆ™æ»¡è¶³ç¢°æ’
 			auto point = bulletVector.at(j)->getPosition();
 			if(rect.containsPoint(point))
 			{
-				//µĞ»úµÄÉúÃüÖµ¼õµô
+				//æ•Œæœºçš„ç”Ÿå‘½å€¼å‡æ‰
 				enemyVector.at(i)->setHp(enemyVector.at(i)->getHp()-1);
-				//´ÓÆÁÄ»ºÍ¹ÜÀíÆ÷ÖĞÒÆ³ı×Óµ¯£¬µĞ»úµÄÒÆ³ıÒÑ¾­Ğ´ÔÚÁËblowupº¯ÊıÖĞ£¬×¢ÒâÒÔÏÂÁ©¾ä»°µÄµ÷ÓÃË³Ğò£¬·ñÔò
-				//²úÉúµÄbugºÜÄÑÅÅ³ı
+				//ä»å±å¹•å’Œç®¡ç†å™¨ä¸­ç§»é™¤å­å¼¹ï¼Œæ•Œæœºçš„ç§»é™¤å·²ç»å†™åœ¨äº†blowupå‡½æ•°ä¸­ï¼Œæ³¨æ„ä»¥ä¸‹ä¿©å¥è¯çš„è°ƒç”¨é¡ºåºï¼Œå¦åˆ™
+				//äº§ç”Ÿçš„bugå¾ˆéš¾æ’é™¤
 				bulletVector.at(j)->removeFromParentAndCleanup(true);
 				bulletVector.eraseObject(bulletVector.at(j));
-				//ÉúÃüÖµÎª0µĞ»ú±¬Õ¨,Èç¹ûµĞ»úÒÑ¾­ËÀÍö¾Í²»ÒªºÍÊ£ÏÂµÄ×Óµ¯½øĞĞÅĞ¶ÏÁË£¬ËùÒÔÒªbreak
+				//ç”Ÿå‘½å€¼ä¸º0æ•Œæœºçˆ†ç‚¸,å¦‚æœæ•Œæœºå·²ç»æ­»äº¡å°±ä¸è¦å’Œå‰©ä¸‹çš„å­å¼¹è¿›è¡Œåˆ¤æ–­äº†ï¼Œæ‰€ä»¥è¦break
 				if(enemyVector.at(i)->getHp() == 0)
 				{
-					//±¬Õ¨¶¯»­
+					//çˆ†ç‚¸åŠ¨ç”»
 					enemyVector.at(i)->blowUp();
-					//±¬Õ¨ÉùÒô
+					//çˆ†ç‚¸å£°éŸ³
 					auto hp = enemyVector.at(i)->getOriginalHp();
 					if(hp == 5)
 						Sound::getInstance()->playEffect(EFFECT_TYPE_ENEMY1_DOWN);
@@ -171,37 +171,37 @@ void MainGame::isHitEnemy(float tm)
 					else
 						Sound::getInstance()->playEffect(EFFECT_TYPE_ENEMY3_DOWN);
 
-					//¸Ä±ä·ÖÊı
+					//æ”¹å˜åˆ†æ•°
 					auto saveData = m_ui->getSaveData();
-					//¼ÓÉÏ·ÖÊı£¬Õâ¸ö·ÖÊıÊÇµĞ»úµÄÉúÃüÖµ£¬º¯ÊıgetOriginalHpÊÇĞÂ¼ÓµÄ
+					//åŠ ä¸Šåˆ†æ•°ï¼Œè¿™ä¸ªåˆ†æ•°æ˜¯æ•Œæœºçš„ç”Ÿå‘½å€¼ï¼Œå‡½æ•°getOriginalHpæ˜¯æ–°åŠ çš„
 					saveData->setScore(saveData->getScore()+hp);
 					break;
 				}
 				else
 				{
-					//²¥·ÅµĞ»úÊÜÉËµÄ¶¯»­
+					//æ’­æ”¾æ•Œæœºå—ä¼¤çš„åŠ¨ç”»
 					enemyVector.at(i)->hit();
 				}
 			}
 		}
 	}
 
-	/*Íæ¼Ò·É»úºÍUFOµÄÅö×²¼ì²â*/
+	/*ç©å®¶é£æœºå’ŒUFOçš„ç¢°æ’æ£€æµ‹*/
 
-	//ÅĞ¶ÏÊÇ·ñÌí¼ÓÁËUFO£¬¼ÇµÃUFOÒªÔÚinitº¯ÊıÖĞ³õÊ¼»¯
+	//åˆ¤æ–­æ˜¯å¦æ·»åŠ äº†UFOï¼Œè®°å¾—UFOè¦åœ¨initå‡½æ•°ä¸­åˆå§‹åŒ–
 	if(m_ufo != NULL)
 	{
 		auto rect = m_player->getBoundingBox();
 		auto point = m_ufo->getPosition();
-		//ÈçºÎÍæ¼ÒºÍUFOÅö×²µ½ÁË
+		//å¦‚ä½•ç©å®¶å’ŒUFOç¢°æ’åˆ°äº†
 		if(rect.containsPoint(point))
 		{
-			//²¥·Å»ñµÃµÀ¾ßµÄÉùÒô
+			//æ’­æ”¾è·å¾—é“å…·çš„å£°éŸ³
 			Sound::getInstance()->playEffect(EFFECT_TYPE_GET_UFO);
-			//¸ù¾İÅö×²µ½µÄ²»Í¬µÀ¾ß£¬×ö²»Í¬µÄ´¦Àí
+			//æ ¹æ®ç¢°æ’åˆ°çš„ä¸åŒé“å…·ï¼Œåšä¸åŒçš„å¤„ç†
 			if(m_ufo->getName() == "ufo1.png")
 			{
-				//ÉèÖÃ×Óµ¯µÄÃû³Æ
+				//è®¾ç½®å­å¼¹çš„åç§°
 				m_bulletName = "bullet2.png";
 			}
 			else if(m_ufo->getName() == "ufo2.png")
@@ -213,31 +213,31 @@ void MainGame::isHitEnemy(float tm)
 				this->gameOver();
 				return;
 			}
-			//·¢ÉäË«·¢×Óµ¯£¬³ÖĞøÊ±¼äÊÇ4s
+			//å‘å°„åŒå‘å­å¼¹ï¼ŒæŒç»­æ—¶é—´æ˜¯4s
 			this->schedule(SEL_SCHEDULE(&MainGame::addBulletByUfo),0.1f,40,0);
-			//Í£Ö¹µ¥·¢×Óµ¯µÄ·¢Éä
+			//åœæ­¢å•å‘å­å¼¹çš„å‘å°„
 			this->unschedule(SEL_SCHEDULE(&MainGame::addBullet));
-			//4sºóÔÙ·¢Éäµ¥·¢×Óµ¯
+			//4såå†å‘å°„å•å‘å­å¼¹
 			this->schedule(SEL_SCHEDULE(&MainGame::addBullet),0.1f,-1,4.0f);
-			//Èç¹ûÅö×²¼ì²âµ½ÁË£¬ÔòÉèÖÃÕâ¸öUFOÎª²»¿É¼û£¬ÒòÎªÒÆ³ıµÄ¹¤×÷»áÔÚUFOÖ´ĞĞÍê¶¯×÷ÒÔºó½øĞĞ
+			//å¦‚æœç¢°æ’æ£€æµ‹åˆ°äº†ï¼Œåˆ™è®¾ç½®è¿™ä¸ªUFOä¸ºä¸å¯è§ï¼Œå› ä¸ºç§»é™¤çš„å·¥ä½œä¼šåœ¨UFOæ‰§è¡Œå®ŒåŠ¨ä½œä»¥åè¿›è¡Œ
 			m_ufo->setVisible(false);
-			//×îºó½«³ÉÔ±±äÁ¿ÉèÖÃÎªnull
+			//æœ€åå°†æˆå‘˜å˜é‡è®¾ç½®ä¸ºnull
 			m_ufo = NULL;
 		}
-		//Èç¹ûUFOÀë¿ªÁËÆÁÄ»¾ÍÉèÖÃÎªnull
+		//å¦‚æœUFOç¦»å¼€äº†å±å¹•å°±è®¾ç½®ä¸ºnull
 		if(m_ufo != NULL && point.y < -m_ufo->getContentSize().height/2)
 		{
 			m_ufo = NULL;
 		}
 	}
 
-	/*Íæ¼Ò·É»úºÍµĞ»úµÄÅö×²¼ì²â*/
+	/*ç©å®¶é£æœºå’Œæ•Œæœºçš„ç¢°æ’æ£€æµ‹*/
 	for(auto enemy : enemyVector)
 	{
-		//Èç¹ûµĞ»ú»ÙÃğ»á²¥·Å¶¯»­ÔİÊ±»¹²»»á´Ó¹ÜÀíÆ÷ÖĞÒÆ³ı£¬ËùÒÔÕâÀïÒªÅĞ¶ÏÒ»ÏÂÊÇ·ñÒÑ¾­»ÙÃğ
+		//å¦‚æœæ•Œæœºæ¯ç­ä¼šæ’­æ”¾åŠ¨ç”»æš‚æ—¶è¿˜ä¸ä¼šä»ç®¡ç†å™¨ä¸­ç§»é™¤ï¼Œæ‰€ä»¥è¿™é‡Œè¦åˆ¤æ–­ä¸€ä¸‹æ˜¯å¦å·²ç»æ¯ç­
 		if(enemy->getHp() == 0)
 		{
-			//Èç¹ûÒÑ¾­»ÙÃğ¾Í²»Òª½øĞĞÅö×²¼ì²âÁË
+			//å¦‚æœå·²ç»æ¯ç­å°±ä¸è¦è¿›è¡Œç¢°æ’æ£€æµ‹äº†
 			continue;
 		}
 
@@ -250,17 +250,17 @@ void MainGame::isHitEnemy(float tm)
 	}
 }
 
-//ÓÎÏ·½áÊø
+//æ¸¸æˆç»“æŸ
 void MainGame::gameOver()
 {
-	//±£´æÓÎÏ·Êı¾İ
+	//ä¿å­˜æ¸¸æˆæ•°æ®
 	this->m_ui->getSaveData()->save();
 
-	//Í£Ö¹·¢Éä×Óµ¯
+	//åœæ­¢å‘å°„å­å¼¹
 	this->unschedule(SEL_SCHEDULE(&MainGame::addBullet));
 	this->unschedule(SEL_SCHEDULE(&MainGame::addBulletByUfo));
 
-	//Íæ¼Ò·É»úÕ¨»ÙµÄ¶¯»­
+	//ç©å®¶é£æœºç‚¸æ¯çš„åŠ¨ç”»
 	Vector<SpriteFrame *> vector;
 	for(int i=0;i<4;i++)
 	{
@@ -270,23 +270,23 @@ void MainGame::gameOver()
 	}
 	auto animation = Animation::createWithSpriteFrames(vector,0.3f,1);
 	auto animate = Animate::create(animation);
-	//ÇĞ»»³¡¾°
+	//åˆ‡æ¢åœºæ™¯
 	auto func = []()
 	{
-		//Åöµ½Õ¨µ¯µÄ´¦ÀíºÍÅöµ½µĞ»úµÄ´¦ÀíÊÇÏàÍ¬µÄ
+		//ç¢°åˆ°ç‚¸å¼¹çš„å¤„ç†å’Œç¢°åˆ°æ•Œæœºçš„å¤„ç†æ˜¯ç›¸åŒçš„
 		Director::getInstance()->replaceScene(GameOver::createScene());
 	};
-	//Ö´ĞĞ¶¯×÷ĞòÁĞ
+	//æ‰§è¡ŒåŠ¨ä½œåºåˆ—
 	auto sequence = Sequence::create(animate,CallFunc::create(func),NULL);
 	this->m_player->runAction(sequence);
-	//²¥·ÅÒôĞ§
+	//æ’­æ”¾éŸ³æ•ˆ
 	Sound::getInstance()->playEffect(EFFECT_TYPE_GAME_OVER);
 }
 
-//µ±Íæ¼Ò·É»úºÍUFOÅö×²ÒÔºóÌí¼Ó×Óµ¯
+//å½“ç©å®¶é£æœºå’ŒUFOç¢°æ’ä»¥åæ·»åŠ å­å¼¹
 void MainGame::addBulletByUfo(float tm)
 {
-	//´´½¨Ë«·¢×Óµ¯
+	//åˆ›å»ºåŒå‘å­å¼¹
 	auto bullet1 = Bullet::create();
 	bullet1->setVisible(false);
 	bullet1->initBullet(m_bulletName);
@@ -294,7 +294,7 @@ void MainGame::addBulletByUfo(float tm)
 	bullet2->setVisible(false);
 	bullet2->initBullet(m_bulletName);
 	
-	//ÉèÖÃÎ»ÖÃ
+	//è®¾ç½®ä½ç½®
 	auto point1 = Point(m_player->getPositionX()-23,
 		m_player->getPositionY()+m_player->getContentSize().height/2+45);
 	bullet1->setPosition(point1);
@@ -302,19 +302,19 @@ void MainGame::addBulletByUfo(float tm)
 		m_player->getPositionY()+m_player->getContentSize().height/2+45);
 	bullet2->setPosition(point2);
 	
-	//Ìí¼Ó×Óµ¯
+	//æ·»åŠ å­å¼¹
 	this->addChild(bullet1);
 	this->addChild(bullet2);
-	//½«×Óµ¯Ìí¼Óµ½¹ÜÀíÆ÷ÖĞ
+	//å°†å­å¼¹æ·»åŠ åˆ°ç®¡ç†å™¨ä¸­
 	auto & vector = Manager::getInstance()->getBulletVector();
 	vector.pushBack(bullet1);
 	vector.pushBack(bullet2);
-	//²¥·Å·¢Éä×Óµ¯µÄÉùÒô
+	//æ’­æ”¾å‘å°„å­å¼¹çš„å£°éŸ³
 	Sound::getInstance()->playEffect(EFFECT_TYPE_BULLET);
 	Sound::getInstance()->playEffect(EFFECT_TYPE_BULLET);
 }
 
-//Ìí¼Ó×Óµ¯
+//æ·»åŠ å­å¼¹
 void MainGame::addBullet(float tm)
 {
 	auto bullet = Bullet::create();
@@ -325,26 +325,26 @@ void MainGame::addBullet(float tm)
 	bullet->setPosition(point);
 	
 	this->addChild(bullet);
-	//½«×Óµ¯Ìí¼Óµ½¹ÜÀíÆ÷ÖĞ
+	//å°†å­å¼¹æ·»åŠ åˆ°ç®¡ç†å™¨ä¸­
 	auto & vector = Manager::getInstance()->getBulletVector();
 	vector.pushBack(bullet);
-	//²¥·Å·¢Éä×Óµ¯µÄÉùÒô
+	//æ’­æ”¾å‘å°„å­å¼¹çš„å£°éŸ³
 	Sound::getInstance()->playEffect(EFFECT_TYPE_BULLET);
 }
 
-//Ìí¼ÓµĞ»ú
+//æ·»åŠ æ•Œæœº
 void MainGame::addEnemy(float tm)
 {
-	//ÕâÀïÊÇ¸ù¾İ·ÖÊıÀ´¸Ä±äµĞ»ú³öÏÖµÄ¿ìÂı
+	//è¿™é‡Œæ˜¯æ ¹æ®åˆ†æ•°æ¥æ”¹å˜æ•Œæœºå‡ºç°çš„å¿«æ…¢
 	int score = m_ui->getSaveData()->getScore();
-	//¸üĞÂscheduleÖ»¸üĞÂÒ»´Î£¬Ê¹ÓÃlevelÀ´¿ØÖÆ
+	//æ›´æ–°scheduleåªæ›´æ–°ä¸€æ¬¡ï¼Œä½¿ç”¨levelæ¥æ§åˆ¶
 	if(score<50 && m_level == 0)
 	{
 		m_level = 1;
 	}
 	else if(score>50 && score<=200 && m_level == 1)
 	{
-		//ÖØĞÂµ÷ÓÃschedule»á¸üĞÂÊ±¼äµÄ
+		//é‡æ–°è°ƒç”¨scheduleä¼šæ›´æ–°æ—¶é—´çš„
 		this->schedule(SEL_SCHEDULE(&MainGame::addEnemy),0.8f);
 		m_level = 2;
 	}
@@ -364,10 +364,10 @@ void MainGame::addEnemy(float tm)
 		m_level = 5;
 	}
 
-	/*µ½´Ë´¦ÎªÖ¹£¬´úÂë¾ÍÃ»ÓĞĞŞ¸ÄÁË£¬ÉÏ±ßÊÇĞŞ¸Ä¹ıµÄ´úÂë*/
+	/*åˆ°æ­¤å¤„ä¸ºæ­¢ï¼Œä»£ç å°±æ²¡æœ‰ä¿®æ”¹äº†ï¼Œä¸Šè¾¹æ˜¯ä¿®æ”¹è¿‡çš„ä»£ç */
 
 	auto enemy = EnemyBase::create();
-	//¸ù¾İ²»Í¬µÄ¸ÅÂÊÀ´Ìí¼Ó²»Í¬ÖÖÀàµÄ·É»ú
+	//æ ¹æ®ä¸åŒçš„æ¦‚ç‡æ¥æ·»åŠ ä¸åŒç§ç±»çš„é£æœº
 	int enemy_x = CCRANDOM_0_1()*9+1;
 	int count = 0;
 	if(enemy_x > 0 && enemy_x <7)
@@ -382,53 +382,53 @@ void MainGame::addEnemy(float tm)
 	}
 	else
 	{
-		//µĞ»úÈıÓÃµ½µÄ±³¾°Í¼Æ¬²»Ì«Ò»Ñù£¬ÕâÀïµ¥¶ÀµÄ½¨Á¢ÏÂ
+		//æ•Œæœºä¸‰ç”¨åˆ°çš„èƒŒæ™¯å›¾ç‰‡ä¸å¤ªä¸€æ ·ï¼Œè¿™é‡Œå•ç‹¬çš„å»ºç«‹ä¸‹
 		count = 6;
 		enemy->initEnemy("enemy3_n1",count);
-		//´´½¨µĞ»úÈıµÄ¶¯»­
+		//åˆ›å»ºæ•Œæœºä¸‰çš„åŠ¨ç”»
 		Vector<SpriteFrame *> vector;
 		vector.pushBack(SpriteFrameCache::getInstance()->getSpriteFrameByName("enemy3_n1.png"));
 		vector.pushBack(SpriteFrameCache::getInstance()->getSpriteFrameByName("enemy3_n2.png"));
 		auto animation = Animation::createWithSpriteFrames(vector,0.2f,-1);
 		auto animate = Animate::create(animation);
 		enemy->runAction(animate);
-		//Ìí¼Óµ½µ±Ç°µÄ²ãÖĞ
+		//æ·»åŠ åˆ°å½“å‰çš„å±‚ä¸­
 		this->addChild(enemy);
-		//½«µĞ»úÌí¼Óµ½¹ÜÀíÆ÷ÖĞ
+		//å°†æ•Œæœºæ·»åŠ åˆ°ç®¡ç†å™¨ä¸­
 		auto & enemyVector = Manager::getInstance()->getEnemyVector();
 		enemyVector.pushBack(enemy);
-		//Ö±½Ó·µ»Ø£¬²»ÔÙÖ´ĞĞÏÂÃæµÄÓï¾ä
+		//ç›´æ¥è¿”å›ï¼Œä¸å†æ‰§è¡Œä¸‹é¢çš„è¯­å¥
 		return;
 	}
-	//ÒÔÏÂµÄÕâ¾ä»°Ò»¶¨Òªµ÷ÓÃ
+	//ä»¥ä¸‹çš„è¿™å¥è¯ä¸€å®šè¦è°ƒç”¨
 	auto str = __String::createWithFormat("enemy%d",enemy_x);
 	enemy->initEnemy(str->getCString(),count);
 	this->addChild(enemy);
-	//½«µĞ»úÌí¼Óµ½¹ÜÀíÆ÷ÖĞ
+	//å°†æ•Œæœºæ·»åŠ åˆ°ç®¡ç†å™¨ä¸­
 	auto & vector = Manager::getInstance()->getEnemyVector();
 	vector.pushBack(enemy);
 }
 
-//android·µ»Ø¼üµÄ¼àÌı
+//androidè¿”å›é”®çš„ç›‘å¬
 void MainGame::onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent)
 {
-	//ÇĞ»»µ½¿ªÊ¼ÓÎÏ·³¡¾°
+	//åˆ‡æ¢åˆ°å¼€å§‹æ¸¸æˆåœºæ™¯
 	Director::getInstance()->replaceScene(StartGame::createScene());
-	//ÍË³öÖ®Ç°±£´æÓÃ»§Êı¾İ
+	//é€€å‡ºä¹‹å‰ä¿å­˜ç”¨æˆ·æ•°æ®
 	m_ui->getSaveData()->save();
-	//Ìí¼ÓÉùÒô
+	//æ·»åŠ å£°éŸ³
 	Sound::getInstance()->playEffect(EFFECT_TYPE_BUTTON);
 }
 
-//µ¥µã´¥ÃşµÄ¼àÌıº¯Êı
+//å•ç‚¹è§¦æ‘¸çš„ç›‘å¬å‡½æ•°
 bool MainGame::onTouchBegan(Touch * touch,Event * pEvent)
 {
-	//»ñµÃ´¥Ãşµã
+	//è·å¾—è§¦æ‘¸ç‚¹
 	auto point = touch->getLocation();
 
-	//ÅĞ¶ÏÊÖÖ¸ÊÇ·ñµã»÷ÁËÔİÍ£°´Å¥£¬ÒòÎªÔÚandroidÉÏÊÖÖ¸µÄµã»÷·¶Î§ÓĞµãĞ¡£¬ÕâÀïÉèÖÃµÄ´óÒ»Ğ©
+	//åˆ¤æ–­æ‰‹æŒ‡æ˜¯å¦ç‚¹å‡»äº†æš‚åœæŒ‰é’®ï¼Œå› ä¸ºåœ¨androidä¸Šæ‰‹æŒ‡çš„ç‚¹å‡»èŒƒå›´æœ‰ç‚¹å°ï¼Œè¿™é‡Œè®¾ç½®çš„å¤§ä¸€äº›
 	auto menuRect = m_ui->getMenu()->getBoundingBox();
-	//originÊÇÍ¼Æ¬µÄ×óÉÏ½Çµã£¬ÕâÀï°ÑrectÉèÖÃµÄ·¶Î§´óÒ»Ğ©
+	//originæ˜¯å›¾ç‰‡çš„å·¦ä¸Šè§’ç‚¹ï¼Œè¿™é‡ŒæŠŠrectè®¾ç½®çš„èŒƒå›´å¤§ä¸€äº›
 	menuRect = Rect(menuRect.origin.x-menuRect.size.width*3,
 		menuRect.origin.y-menuRect.size.height,menuRect.size.width*3,menuRect.size.height*2);
 	if(menuRect.containsPoint(point))
@@ -437,7 +437,7 @@ bool MainGame::onTouchBegan(Touch * touch,Event * pEvent)
 		m_ui->menuCallback(m_ui->getMenu());
 	}
 
-	//ÅĞ¶ÏÊÖÖ¸µã»÷µÄÇøÓòÊÇ·ñÔÚ·É»úÉÏ
+	//åˆ¤æ–­æ‰‹æŒ‡ç‚¹å‡»çš„åŒºåŸŸæ˜¯å¦åœ¨é£æœºä¸Š
 	auto rect = m_player->getBoundingBox();
 	if(rect.containsPoint(point))
 		return true;
@@ -446,13 +446,13 @@ bool MainGame::onTouchBegan(Touch * touch,Event * pEvent)
 }
 void MainGame::onTouchMoved(Touch * touch,Event * pEvent)
 {
-	//¸úËæÊÖÖ¸ÒÆ¶¯·É»úµÄÎ»ÖÃ
+	//è·Ÿéšæ‰‹æŒ‡ç§»åŠ¨é£æœºçš„ä½ç½®
 	auto addPoint = touch->getLocation()-touch->getPreviousLocation();
 	m_player->setPosition(m_player->getPosition()+addPoint);
 
-	//ÅĞ¶Ï·É»úÒÆ¶¯µÄ·¶Î§£¬²»Òª³¬³öÁË±ß½ç
+	//åˆ¤æ–­é£æœºç§»åŠ¨çš„èŒƒå›´ï¼Œä¸è¦è¶…å‡ºäº†è¾¹ç•Œ
 	auto size = m_player->getContentSize();
-	//Èç¹ûx·½ÏòµÄ×ø±êĞ¡ÓÚÁËËü×Ô¼º¿í¶ÈµÄÒ»°ã£¬»òÕßÊÇ´óÓÚÁËÆÁÄ»µÄ¿í¶È¼õÈ¥×Ô¼º¿í¶ÈµÄÒ»°ëµÄ´óĞ¡¾ÍÔ½½çÁË
+	//å¦‚æœxæ–¹å‘çš„åæ ‡å°äºäº†å®ƒè‡ªå·±å®½åº¦çš„ä¸€èˆ¬ï¼Œæˆ–è€…æ˜¯å¤§äºäº†å±å¹•çš„å®½åº¦å‡å»è‡ªå·±å®½åº¦çš„ä¸€åŠçš„å¤§å°å°±è¶Šç•Œäº†
 	if(m_player->getPositionX() < size.width/2)
 	{
 		m_player->setPositionX(size.width/2);
@@ -461,7 +461,7 @@ void MainGame::onTouchMoved(Touch * touch,Event * pEvent)
 	{
 		m_player->setPositionX(m_size.width-size.width/2);
 	}
-	//y·½Ïò¸ù¾İx·½ÏòµÄÅĞ¶Ï·½·¨½øĞĞÀàÍÆ
+	//yæ–¹å‘æ ¹æ®xæ–¹å‘çš„åˆ¤æ–­æ–¹æ³•è¿›è¡Œç±»æ¨
 	if(m_player->getPositionY() < size.height/2)
 	{
 		m_player->setPositionY(size.height/2);

@@ -1,5 +1,5 @@
 #include "Bullet.h"
-#include "Manager\Manager.h"
+#include "Manager.h"
 
 Bullet::Bullet(void)
 {
@@ -21,27 +21,27 @@ bool Bullet::init()
 void Bullet::onEnterTransitionDidFinish()
 {
 	Sprite::onEnterTransitionDidFinish();
-	//Ã¿¸ôÒ»¶¨Ê±¼äÒÆ¶¯×Óµ¯
+	//æ¯éš”ä¸€å®šæ—¶é—´ç§»åŠ¨å­å¼¹
 	this->schedule(SEL_SCHEDULE(&Bullet::move),0.1f);
 }
 
-//¸ù¾Ý´«ÈëµÄÎÆÀíÃû³ÆÀ´³õÊ¼»¯×Óµ¯Àà
+//æ ¹æ®ä¼ å…¥çš„çº¹ç†åç§°æ¥åˆå§‹åŒ–å­å¼¹ç±»
 void Bullet::initBullet(std::string name)
 {
 	this->initWithSpriteFrameName(name);
 }
 
-//×Óµ¯ÒÆ¶¯
+//å­å¼¹ç§»åŠ¨
 void Bullet::move(float tm)
 {
 	this->setVisible(true);
 	auto move = MoveBy::create(0.1f,Point(0,OFFSET));
 	this->runAction(move);
-	//×Óµ¯ÒÆ¶¯³öÁËÆÁÄ»
+	//å­å¼¹ç§»åŠ¨å‡ºäº†å±å¹•
 	if(this->getPositionY() > Director::getInstance()->getWinSize().height)
 	{
 		this->removeFromParentAndCleanup(true);
-		//´Ó¹ÜÀíÆ÷ÖÐÒÆ³ý³öÈ¥
+		//ä»Žç®¡ç†å™¨ä¸­ç§»é™¤å‡ºåŽ»
 		auto & vector = Manager::getInstance()->getBulletVector();
 		vector.eraseObject(this);
 	}

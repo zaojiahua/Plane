@@ -18,33 +18,33 @@ bool UILayer::init()
 
 	auto size = Director::getInstance()->getWinSize();
 
-	//´ÓxmlÎÄ¼þÖÐ¶ÁÈ¡ÖÐÎÄÏÔÊ¾³öÀ´
+	//ä»Žxmlæ–‡ä»¶ä¸­è¯»å–ä¸­æ–‡æ˜¾ç¤ºå‡ºæ¥
 	auto dictionary = Dictionary::createWithContentsOfFile("font/text.xml");
 	score_label = Label::createWithTTF(((__String *)(dictionary->objectForKey("score")))->getCString(),"font/DFPShaoNvW5-GB.ttf",40);
 	score_label->setPosition(score_label->getContentSize().width/2,
 		size.height-score_label->getContentSize().height/2);
 	this->addChild(score_label);
 
-	//Ìí¼ÓÏÔÊ¾·ÖÊýµÄ±êÇ©
+	//æ·»åŠ æ˜¾ç¤ºåˆ†æ•°çš„æ ‡ç­¾
 	m_saveData = SaveData::create();
-	//ÕâÀïÒ»¶¨ÒªretainÒ»ÏÂsaveData£¬ÔÚÎö¹¹º¯ÊýÖÐreleaseÒ»ÏÂ
+	//è¿™é‡Œä¸€å®šè¦retainä¸€ä¸‹saveDataï¼Œåœ¨æžæž„å‡½æ•°ä¸­releaseä¸€ä¸‹
 	m_saveData->retain();
 	auto str = __String::createWithFormat("%d",m_saveData->getScore());
 	m_score = Label::createWithBMFont("font/font.fnt",str->getCString());
 	m_score->setPosition(Point(score_label->getContentSize().width+m_score->getContentSize().width/2+30,
 		size.height-score_label->getContentSize().height/2));
 	this->addChild(m_score);
-	//¼ÇµÃ¸üÐÂ·ÖÊýµÄÏÔÊ¾
+	//è®°å¾—æ›´æ–°åˆ†æ•°çš„æ˜¾ç¤º
 	this->scheduleUpdate();
 
-	//Ìí¼ÓÓÎÏ·ÔÝÍ£ºÍ¿ªÊ¼µÄ¿ª¹Ø²Ëµ¥
+	//æ·»åŠ æ¸¸æˆæš‚åœå’Œå¼€å§‹çš„å¼€å…³èœå•
 	auto toggle1 = MenuItemImage::create();
 	toggle1->setNormalSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("pause_button.png"));
 	auto toggle2 = MenuItemImage::create();
 	toggle2->setNormalSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("resume_button.png"));
 	menuToggle = MenuItemToggle::createWithCallback(CC_CALLBACK_1(UILayer::menuCallback,this),toggle1,toggle2,NULL);
-	//¸Õ¿ªÊ¼ÉèÖÃÑ¡ÔñµÄindexÊÇ0£¬Èç¹ûµã»÷ÁËÔÝÍ£ÉèÖÃindexÎª1£¬toggleÖÐµÄindexÊÇ´Ó0¿ªÊ¼µÄ£¬µÚÒ»¸öÌí¼Ó½øÈ¥µÄ
-	//itemµÄindexÎª0
+	//åˆšå¼€å§‹è®¾ç½®é€‰æ‹©çš„indexæ˜¯0ï¼Œå¦‚æžœç‚¹å‡»äº†æš‚åœè®¾ç½®indexä¸º1ï¼Œtoggleä¸­çš„indexæ˜¯ä»Ž0å¼€å§‹çš„ï¼Œç¬¬ä¸€ä¸ªæ·»åŠ è¿›åŽ»çš„
+	//itemçš„indexä¸º0
 	menuToggle->setSelectedIndex(0);
 	menuToggle->setPosition(Point(size.width*0.95,size.height*0.97));
 	auto menu = Menu::create(menuToggle,NULL);
@@ -57,7 +57,7 @@ bool UILayer::init()
 void UILayer::update(float tm)
 {
 	auto str = __String::createWithFormat("%d",m_saveData->getScore());
-	//¸üÐÂ·ÖÊýºÍ×ø±ê
+	//æ›´æ–°åˆ†æ•°å’Œåæ ‡
 	m_score->setString(str->getCString());
 	m_score->setPositionX(score_label->getContentSize().width+m_score->getContentSize().width/2+30);
 }
@@ -65,23 +65,23 @@ void UILayer::update(float tm)
 void UILayer::menuCallback(Ref * ref)
 {
 	auto toggle = (MenuItemToggle *)ref;
-	//¸ù¾ÝÓÃ»§Ñ¡ÔñµÄ²»Í¬×ö²»Í¬µÄ´¦Àí£¬¸Õ¿ªÊ¼ÎÒÃÇÉèÖÃµÄÊ±ºòÊÇ0£¬Ò»µã»÷ÏµÍ³¾Í½øÐÐÁËÇÐ»»£¬½«indexÉèÖÃÎªÁË1
+	//æ ¹æ®ç”¨æˆ·é€‰æ‹©çš„ä¸åŒåšä¸åŒçš„å¤„ç†ï¼Œåˆšå¼€å§‹æˆ‘ä»¬è®¾ç½®çš„æ—¶å€™æ˜¯0ï¼Œä¸€ç‚¹å‡»ç³»ç»Ÿå°±è¿›è¡Œäº†åˆ‡æ¢ï¼Œå°†indexè®¾ç½®ä¸ºäº†1
 	if(toggle->getSelectedIndex() == 1)
 	{
-		//¿ÉÒÔÖ±½ÓÊ¹ÓÃpause·½·¨ÔÝÍ£µ±Ç°µÄ³¡¾°£¬µ«ÊÇÕâÑù×öÓÐÒ»¸öbug£¬¾ÍÊÇ²»ÄÜ¹»ÆÁ±Î´¥ÃþÊÂ¼þ£¬ËùÒÔ²ÉÓÃ½ØÍ¼µÄ·½·¨
+		//å¯ä»¥ç›´æŽ¥ä½¿ç”¨pauseæ–¹æ³•æš‚åœå½“å‰çš„åœºæ™¯ï¼Œä½†æ˜¯è¿™æ ·åšæœ‰ä¸€ä¸ªbugï¼Œå°±æ˜¯ä¸èƒ½å¤Ÿå±è”½è§¦æ‘¸äº‹ä»¶ï¼Œæ‰€ä»¥é‡‡ç”¨æˆªå›¾çš„æ–¹æ³•
 		//Director::getInstance()->pause();
 
-		/*½ØÈ¡µ±Ç°³¡¾°µÄÍ¼Æ¬²¢ÇÒ±£´æ*/
+		/*æˆªå–å½“å‰åœºæ™¯çš„å›¾ç‰‡å¹¶ä¸”ä¿å­˜*/
 		this->screenShoot();
 		
-		//¶ÔÉùÒôµÄ´¦Àí UILayerÖÐÔÝÍ£°´Å¥°´ÏÂµÄÊ±ºò
+		//å¯¹å£°éŸ³çš„å¤„ç† UILayerä¸­æš‚åœæŒ‰é’®æŒ‰ä¸‹çš„æ—¶å€™
 		SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 
-		//3.0½ØÆÁÐèÒªÔÚ½ØÍêÆÁµÄÏÂÒ»Ö¡²ÅÄÜ´¦ÀíRenderTexture£¬ÕâµãÒª×¢Òâ
+		//3.0æˆªå±éœ€è¦åœ¨æˆªå®Œå±çš„ä¸‹ä¸€å¸§æ‰èƒ½å¤„ç†RenderTextureï¼Œè¿™ç‚¹è¦æ³¨æ„
 		auto _schedule = this->getScheduler();
 		auto replaceScene = [](float tm)
 		{
-			//×îºóÇÐ»»³¡¾°
+			//æœ€åŽåˆ‡æ¢åœºæ™¯
 			Director::getInstance()->pushScene(Pause::createScene());
 		};
 		 _schedule->schedule(replaceScene, this, 0.0f,0,0.0f, false, "screenshot");
@@ -90,26 +90,26 @@ void UILayer::menuCallback(Ref * ref)
 	}
 }
 
-//ÆÁÄ»½ØÍ¼
+//å±å¹•æˆªå›¾
 void UILayer::screenShoot()
 {
 	auto size = Director::getInstance()->getWinSize();
-	//RenderTextureÊÇÒ»¸öÎÆÀíäÖÈ¾Àà£¬ÎÒÃÇÐèÒª°ÑÒªäÖÈ¾µÄµ±Ç°³¡¾°·Å½øÈ¥£¬ÕâÊÇ³õÊ¼»¯ËüµÄ´óÐ¡
+	//RenderTextureæ˜¯ä¸€ä¸ªçº¹ç†æ¸²æŸ“ç±»ï¼Œæˆ‘ä»¬éœ€è¦æŠŠè¦æ¸²æŸ“çš„å½“å‰åœºæ™¯æ”¾è¿›åŽ»ï¼Œè¿™æ˜¯åˆå§‹åŒ–å®ƒçš„å¤§å°
 	auto render = RenderTexture::create(size.width,size.height);
-	//¿ªÊ¼»ñÈ¡ÄÚÈÝ
+	//å¼€å§‹èŽ·å–å†…å®¹
 	render->begin();
-	//ÊÇÓÃ½ÚµãµÄvisit·½·¨¼ÓÈëµ½äÖÈ¾ÖÐ
+	//æ˜¯ç”¨èŠ‚ç‚¹çš„visitæ–¹æ³•åŠ å…¥åˆ°æ¸²æŸ“ä¸­
 	Director::getInstance()->getRunningScene()->visit();
-	//½áÊø
+	//ç»“æŸ
 	render->end();
 		
-	//ÕâÀïÒªÌØ±ðµÄËµÃ÷Ò»ÏÂ£¬Èç¹û±£´æµÄÎÄ¼þµÄÃû³Æ²»±ä£¬ÄÇÔÚµÚ¶þ´ÎÒÔºóÔÝÍ£µÄÊ±ºòÓÃµÄÍ¼Æ¬»¹ÊÇµÚÒ»´ÎµÄÍ¼Æ¬
-	//ËäÈ»Â·¾¶ÏÂµÄÍ¼Æ¬·¢ÉúÁË¸Ä±ä£¬µ«ÊÇµÚÒ»´ÎµÄÍ¼Æ¬ÒÑ¾­·Åµ½ÁË»º´æÖÐ£¬ËùÒÔÊ¹ÓÃÈçÏÂµÄ·½·¨½â¾ö
+	//è¿™é‡Œè¦ç‰¹åˆ«çš„è¯´æ˜Žä¸€ä¸‹ï¼Œå¦‚æžœä¿å­˜çš„æ–‡ä»¶çš„åç§°ä¸å˜ï¼Œé‚£åœ¨ç¬¬äºŒæ¬¡ä»¥åŽæš‚åœçš„æ—¶å€™ç”¨çš„å›¾ç‰‡è¿˜æ˜¯ç¬¬ä¸€æ¬¡çš„å›¾ç‰‡
+	//è™½ç„¶è·¯å¾„ä¸‹çš„å›¾ç‰‡å‘ç”Ÿäº†æ”¹å˜ï¼Œä½†æ˜¯ç¬¬ä¸€æ¬¡çš„å›¾ç‰‡å·²ç»æ”¾åˆ°äº†ç¼“å­˜ä¸­ï¼Œæ‰€ä»¥ä½¿ç”¨å¦‚ä¸‹çš„æ–¹æ³•è§£å†³
 	auto index = UserDefault::getInstance()->getIntegerForKey("index",0);
 	UserDefault::getInstance()->setIntegerForKey("index",index+1);
 	auto str = __String::createWithFormat("pause%d.png",index);
 
-	//ÎÒÃÇÃ¿´Î½ØÍ¼¶¼¸Ä±äÁËÍ¼Æ¬µÄÃû³Æ£¬ÕâÑùÔÚÉè±¸ÉÏ»áÓÐºÜ¶àµÄÍ¼Æ¬£¬ËùÒÔÒª°ÑÖ®Ç°µÄÍ¼Æ¬É¾³ýµô
+	//æˆ‘ä»¬æ¯æ¬¡æˆªå›¾éƒ½æ”¹å˜äº†å›¾ç‰‡çš„åç§°ï¼Œè¿™æ ·åœ¨è®¾å¤‡ä¸Šä¼šæœ‰å¾ˆå¤šçš„å›¾ç‰‡ï¼Œæ‰€ä»¥è¦æŠŠä¹‹å‰çš„å›¾ç‰‡åˆ é™¤æŽ‰
 	if(index != 0)
 	{
 		auto str = __String::createWithFormat("pause%d.png",index-1);
@@ -120,7 +120,7 @@ void UILayer::screenShoot()
 		}
 	}
 
-	//±£´æÍ¼Æ¬ÎªPNG¸ñÊ½£¬µ±ÎÒÃÇÏëÒª»ñÈ¡Õâ¸öÎÄ¼þµÄÊ±ºòÊ¹ÓÃ
-	//FileUtils::getInstance()->getWritablePath() + "pause.png";£¬Í¨¹ýÕâ¸ö·½·¨¾Í¿ÉÒÔÈ¡µÃÎÒÃÇ±£´æµÄÍ¼Æ¬À²
+	//ä¿å­˜å›¾ç‰‡ä¸ºPNGæ ¼å¼ï¼Œå½“æˆ‘ä»¬æƒ³è¦èŽ·å–è¿™ä¸ªæ–‡ä»¶çš„æ—¶å€™ä½¿ç”¨
+	//FileUtils::getInstance()->getWritablePath() + "pause.png";ï¼Œé€šè¿‡è¿™ä¸ªæ–¹æ³•å°±å¯ä»¥å–å¾—æˆ‘ä»¬ä¿å­˜çš„å›¾ç‰‡å•¦
 	render->saveToFile(str->getCString(),Image::Format::PNG);
 }

@@ -1,13 +1,13 @@
 #ifndef _START_GAME_H_
 #define _START_GAME_H_
 #include "cocos2d.h"
-//°üº¬ÓÎÏ·Ö÷³¡¾°
+//åŒ…å«æ¸¸æˆä¸»åœºæ™¯
 #include "MainGame.h"
-//·ÖÊı°ñ
+//åˆ†æ•°æ¦œ
 #include "ScoreScene.h"
-//ÉùÒô´¦Àí
-#include "Sound\Sound.h"
-//¹ØÓÚ×÷Õß
+//å£°éŸ³å¤„ç†
+#include "Sound.h"
+//å…³äºä½œè€…
 #include "AboutMe.h"
 
 USING_NS_CC;
@@ -15,29 +15,29 @@ USING_NS_CC;
 class StartGame : public Layer
 {
 public:
-	//¼Ì³ĞlayerĞèÒª¸²Ğ´µÄ¼¸¸öº¯Êı
+	//ç»§æ‰¿layeréœ€è¦è¦†å†™çš„å‡ ä¸ªå‡½æ•°
 	static Scene * createScene();
 	bool init();
 	CREATE_FUNC(StartGame);
-	//½«×ÊÔ´µÄĞ¶ÔØ·Åµ½ÕâÀïÀ´×ö
+	//å°†èµ„æºçš„å¸è½½æ”¾åˆ°è¿™é‡Œæ¥åš
 	void onExit();
 public:
-	//¹¹ÔìºÍÎö¹¹º¯Êı£¬ĞÂ½¨ÏîÄ¿µÄÊ±ºò¾Í×Ô¶¯ÎªÎÒÃÇ½¨Á¢ºÃÁË£¬vs»¹ÊÇºÜ·½±ãµÄ
+	//æ„é€ å’Œææ„å‡½æ•°ï¼Œæ–°å»ºé¡¹ç›®çš„æ—¶å€™å°±è‡ªåŠ¨ä¸ºæˆ‘ä»¬å»ºç«‹å¥½äº†ï¼Œvsè¿˜æ˜¯å¾ˆæ–¹ä¾¿çš„
 	StartGame(void);
 	~StartGame(void);
 public:
-	//¶ÔÓÎÏ·¿ªÊ¼²Ëµ¥µÄÏìÓ¦º¯Êı
+	//å¯¹æ¸¸æˆå¼€å§‹èœå•çš„å“åº”å‡½æ•°
 	void play(Ref * ref);
-	//·ÖÊı°ñ²Ëµ¥µÄÏìÓ¦
+	//åˆ†æ•°æ¦œèœå•çš„å“åº”
 	void scoreScene(Ref * ref);
-	//¹ØÓÚ×÷Õß
+	//å…³äºä½œè€…
 	void aboutMe(Ref * ref);
-	//¶Ô¼üÅÌµÄÏìÓ¦º¯Êı
+	//å¯¹é”®ç›˜çš„å“åº”å‡½æ•°
 	void onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent);
 private:
-	//ÊÂ¼ş¼àÌıÆ÷
+	//äº‹ä»¶ç›‘å¬å™¨
 	EventListenerKeyboard * m_listener;
-	//ÉùÒô´¦Àí
+	//å£°éŸ³å¤„ç†
 	Sound * m_sound;
 };
 

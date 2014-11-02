@@ -14,17 +14,17 @@ bool Background::init()
 		return false;
 
 	m_size = Director::getInstance()->getWinSize();
-	//Ìí¼ÓÁ©ÕÅ±³¾°Í¼Æ¬
+	//æ·»åŠ ä¿©å¼ èƒŒæ™¯å›¾ç‰‡
 	m_background_1 = Sprite::createWithSpriteFrameName("background.png");
 	m_background_1->setAnchorPoint(CCPoint::ZERO);
 	m_background_1->setPosition(Point::ZERO);
-	//ÉèÖÃ¾«ÁéÌùÍ¼ÎŞ¾â³İ£¬ÓÃÀ´½â¾öÒÆ¶¯¹ı³ÌÖĞµÄºÚ±ß£¨½Ğ°×±ßÒ²ĞĞ£©ÎÊÌâ
+	//è®¾ç½®ç²¾çµè´´å›¾æ— é”¯é½¿ï¼Œç”¨æ¥è§£å†³ç§»åŠ¨è¿‡ç¨‹ä¸­çš„é»‘è¾¹ï¼ˆå«ç™½è¾¹ä¹Ÿè¡Œï¼‰é—®é¢˜
 	m_background_1->getTexture()->setAliasTexParameters();
 	this->addChild(m_background_1);
 
 	m_background_2 = Sprite::createWithSpriteFrameName("background.png");
 	m_background_2->setAnchorPoint(Point::ZERO);
-	//ÉèÖÃ×ø±êµÄÊ±ºò¼õ¸öÊıÖµÀ´Ê¹µÃ×îºó²»³öÏÖºÚÏß
+	//è®¾ç½®åæ ‡çš„æ—¶å€™å‡ä¸ªæ•°å€¼æ¥ä½¿å¾—æœ€åä¸å‡ºç°é»‘çº¿
 	m_background_2->setPosition(Point(0,
 		m_background_1->getContentSize().height-2));
 	m_background_2->getTexture()->setAliasTexParameters();
@@ -33,23 +33,23 @@ bool Background::init()
 	return true;
 }
 
-//º¯Êı³õÊ¼»¯Íê±Ïµ÷ÓÃµÄº¯Êı£¬ÊµÏÖµÄĞ§¹û¾ÍÊÇÇĞ»»³¡¾°µÄ¶¯»­²¥·ÅÍê±Ï²ÅÒÆ¶¯µØÍ¼
+//å‡½æ•°åˆå§‹åŒ–å®Œæ¯•è°ƒç”¨çš„å‡½æ•°ï¼Œå®ç°çš„æ•ˆæœå°±æ˜¯åˆ‡æ¢åœºæ™¯çš„åŠ¨ç”»æ’­æ”¾å®Œæ¯•æ‰ç§»åŠ¨åœ°å›¾
 void Background::onEnterTransitionDidFinish()
 {
 	Layer::onEnterTransitionDidFinish();
-	//¸Ä±äÍ¼Æ¬µÄ×ø±ê£¬²úÉúÒÆ¶¯µÄĞ§¹û
+	//æ”¹å˜å›¾ç‰‡çš„åæ ‡ï¼Œäº§ç”Ÿç§»åŠ¨çš„æ•ˆæœ
 	this->schedule(SEL_SCHEDULE(&Background::move),0.01f);
 }
 
-//µØÍ¼ÒÆ¶¯
+//åœ°å›¾ç§»åŠ¨
 void Background::move(float tm)
 {
 	float y1 = m_background_1->getPositionY()-OFFSET;
 	float y2 = m_background_2->getPositionY()-OFFSET;
-	//¸Ä±ä×ø±êÎ»ÖÃ
+	//æ”¹å˜åæ ‡ä½ç½®
 	m_background_1->setPositionY(y1);
 	m_background_2->setPositionY(y2);
-	//ÅĞ¶ÏÊÇ·ñ³¬³öÁËÆÁÄ»µÄ±ß½ç
+	//åˆ¤æ–­æ˜¯å¦è¶…å‡ºäº†å±å¹•çš„è¾¹ç•Œ
 	if(y1 < -m_background_1->getContentSize().height)
 	{
 		m_background_1->setPositionY(m_background_2->getPositionY()+m_background_2->getContentSize().height-2);

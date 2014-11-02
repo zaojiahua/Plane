@@ -22,38 +22,38 @@ void Ufo::initUfo(std::string name)
 	m_name = name;
 	this->initWithSpriteFrameName(name);
 
-	//»ñµÃ×ø±ê
+	//è·å¾—åæ ‡
 	auto size = Director::getInstance()->getWinSize();
 	auto contentSize = this->getContentSize();
-	//ºá×İ×ø±ê°´ÕÕÒÔÏÂµÄ·½·¨ÉèÖÃ
+	//æ¨ªçºµåæ ‡æŒ‰ç…§ä»¥ä¸‹çš„æ–¹æ³•è®¾ç½®
 	auto point = Point(getRandomNumber(contentSize.width/2,
 		size.width-this->getContentSize().width/2),
 		size.height);
 	this->setPosition(point);
 
-	//ÉèÖÃÒ»¸öÇúÏß¶¯×÷ÈÃufoÀ´Ö´ĞĞ
+	//è®¾ç½®ä¸€ä¸ªæ›²çº¿åŠ¨ä½œè®©ufoæ¥æ‰§è¡Œ
 	ccBezierConfig bezier;
-	//±´Èû¶ûÇúÏßµÄÁ©¸ö¿ØÖÆµã¶¼ÔÚÆÁÄ»ÄÚ
+	//è´å¡å°”æ›²çº¿çš„ä¿©ä¸ªæ§åˆ¶ç‚¹éƒ½åœ¨å±å¹•å†…
 	bezier.controlPoint_1 = Point(getRandomNumber(contentSize.width/2,
 		size.width-contentSize.width/2),
 		getRandomNumber(contentSize.height/2,size.height-contentSize.height/2));
 	bezier.controlPoint_2 = Point(getRandomNumber(contentSize.width/2,
 		size.width-contentSize.width/2),
 		getRandomNumber(contentSize.height/2,size.height-contentSize.height/2));
-	//±´Èû¶ûÇúÏßµÄ½áÊøµãÊÇÆÁÄ»µÄÏÂ±ß£¬ÕâÑùUFO¾ÍÏàµ±ÓÚ·É×ßÁË
+	//è´å¡å°”æ›²çº¿çš„ç»“æŸç‚¹æ˜¯å±å¹•çš„ä¸‹è¾¹ï¼Œè¿™æ ·UFOå°±ç›¸å½“äºé£èµ°äº†
 	bezier.endPosition = Point(getRandomNumber(contentSize.width/2,
 		size.width-contentSize.width/2),-contentSize.height);
 
-	//Ê¹ÓÃBezierTo¶¯×÷£¬ÒòÎªÉÏ±ßµÄ¿ØÖÆµãÅäÖÃĞÅÏ¢Ê¹ÓÃµÄ¶¼ÊÇ¾ø¶Ô×ø±êµã
+	//ä½¿ç”¨BezierToåŠ¨ä½œï¼Œå› ä¸ºä¸Šè¾¹çš„æ§åˆ¶ç‚¹é…ç½®ä¿¡æ¯ä½¿ç”¨çš„éƒ½æ˜¯ç»å¯¹åæ ‡ç‚¹
 	auto bezierAction = BezierTo::create(2.0f,bezier);
-	//ÒÆ³ı×Ô¼º
+	//ç§»é™¤è‡ªå·±
 	auto removeAction = RemoveSelf::create();
 	auto action = Sequence::create(bezierAction,removeAction,NULL);
-	//Ö´ĞĞÉÏ±ßµÄ¶¯×÷
+	//æ‰§è¡Œä¸Šè¾¹çš„åŠ¨ä½œ
 	this->runAction(action);
 }
 
-//Èç¹ûÒª»ñµÃa~bÖ®¼äµÄÒ»¸öËæ»úÊı£¬ÔòÓ¦¸ÃÊÇCCRANDOM_0_1*(b-a)+a£¬´«ÈëµÄ²ÎÊı¾ÍÊÇaºÍb
+//å¦‚æœè¦è·å¾—a~bä¹‹é—´çš„ä¸€ä¸ªéšæœºæ•°ï¼Œåˆ™åº”è¯¥æ˜¯CCRANDOM_0_1*(b-a)+aï¼Œä¼ å…¥çš„å‚æ•°å°±æ˜¯aå’Œb
 int Ufo::getRandomNumber(int start,int end)
 {
 	return CCRANDOM_0_1()*(end-start)+start;

@@ -6,7 +6,7 @@ AboutMe::AboutMe(void)
 
 AboutMe::~AboutMe(void)
 {
-	//ÒÆ³ý¼àÌýÆ÷
+	//ç§»é™¤ç›‘å¬å™¨
 	_eventDispatcher->removeEventListenersForTarget(this);
 }
 
@@ -26,27 +26,27 @@ bool AboutMe::init()
 
 	auto size = Director::getInstance()->getWinSize();
 
-	//ÉèÖÃ±³¾°Í¼Æ¬
+	//è®¾ç½®èƒŒæ™¯å›¾ç‰‡
 	auto background = Sprite::createWithSpriteFrameName("background.png");
 	background->setPosition(Point(size.width/2,size.height/2));
 	this->addChild(background);
 
-	//ÉèÖÃlogo
+	//è®¾ç½®logo
 	auto logo = Sprite::create("xiaota_copyright.png");
 	logo->setPosition(Point(size.width/2,size.height-logo->getContentSize().height));
 	this->addChild(logo);
 
-	//¼àÌýÆ÷
+	//ç›‘å¬å™¨
 	auto listener = EventListenerKeyboard::create();
 	listener->onKeyReleased = CC_CALLBACK_2(AboutMe::back,this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener,this);
 
-	//ÉèÖÃÎÄ±¾ÐÅÏ¢
+	//è®¾ç½®æ–‡æœ¬ä¿¡æ¯
 	auto dictionary = Dictionary::createWithContentsOfFile("font/text.xml");
 	auto label = Label::createWithTTF(((__String *)(dictionary->objectForKey("aboutme")))->getCString(),
 		"font/DFPShaoNvW5-GB.ttf",30);
 	label->setColor(Color3B(120,120,120));
-	//ÉèÖÃÎÄ±¾Óò£¬ÎÄ±¾ÓòµÄ´óÐ¡Òª×°µÄÏÂ×ÖÌå£¬·ñÔò¾Í³ö´íÁË
+	//è®¾ç½®æ–‡æœ¬åŸŸï¼Œæ–‡æœ¬åŸŸçš„å¤§å°è¦è£…çš„ä¸‹å­—ä½“ï¼Œå¦åˆ™å°±å‡ºé”™äº†
 	label->setDimensions(size.width-80,size.height*0.5);
 	label->setHorizontalAlignment(TextHAlignment::CENTER);
 	label->setPosition(size.width/2,size.height*0.4);

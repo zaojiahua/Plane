@@ -24,12 +24,12 @@ bool GameOver::init()
 
 	auto size = Director::getInstance()->getWinSize();
 
-	//ÉèÖÃ±³¾°Í¼Æ¬
+	//è®¾ç½®èƒŒæ™¯å›¾ç‰‡
 	auto background = Sprite::createWithSpriteFrameName("gameover.png");
 	background->setPosition(Point(size.width/2,size.height/2));
 	this->addChild(background);
 
-	//Ìí¼Ó»Øµ½ÓÎÏ·µÄ²Ëµ¥
+	//æ·»åŠ å›žåˆ°æ¸¸æˆçš„èœå•
 	auto returnItem = MenuItemImage::create();
 	returnItem->setNormalSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("btn_finish.png"));
 	returnItem->setCallback(CC_CALLBACK_1(GameOver::backGame,this));
@@ -37,7 +37,7 @@ bool GameOver::init()
 	menu->setPosition(Point(size.width/2,size.height*0.3));
 	this->addChild(menu);
 
-	//Ìí¼ÓÍæ¼ÒµÃ·Ö
+	//æ·»åŠ çŽ©å®¶å¾—åˆ†
 	auto score_int = UserDefault::getInstance()->getIntegerForKey("currentScore");
 	auto score_str = __String::createWithFormat("%d",score_int);
 	auto score = Label::createWithTTF(score_str->getCString(),"font/arial.ttf",40);
@@ -51,7 +51,7 @@ bool GameOver::init()
 
 void GameOver::backGame(Ref * ref)
 {
-	//ÇÐ»»µ½¿ªÊ¼ÓÎÏ·µÄ³¡¾°
+	//åˆ‡æ¢åˆ°å¼€å§‹æ¸¸æˆçš„åœºæ™¯
 	Director::getInstance()->replaceScene(StartGame::createScene());
 	Sound::getInstance()->playEffect(EFFECT_TYPE_BUTTON);
 }

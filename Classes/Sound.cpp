@@ -23,12 +23,12 @@ void Sound::freeInstance()
 
 Sound::Sound()
 {
-	//Ô¤ÏÈ¼ÓÔØÉùÒô£¬²ÎÊıÊÇÉùÒôÎÄ¼ş
+	//é¢„å…ˆåŠ è½½å£°éŸ³ï¼Œå‚æ•°æ˜¯å£°éŸ³æ–‡ä»¶
 	auto audio = SimpleAudioEngine::getInstance();
-	//Ô¤ÏÈ¼ÓÔØÒôÀÖµÄº¯ÊıÔÚwin32ÏÂÊÇ¿ÕµÄÊµÏÖ ²¥·ÅµÄĞ§¹ûÊÇÖÍºóµÄ ÔÚandroidÉÏÃ»ÓĞÎÊÌâ
+	//é¢„å…ˆåŠ è½½éŸ³ä¹çš„å‡½æ•°åœ¨win32ä¸‹æ˜¯ç©ºçš„å®ç° æ’­æ”¾çš„æ•ˆæœæ˜¯æ»åçš„ åœ¨androidä¸Šæ²¡æœ‰é—®é¢˜
 	audio->preloadBackgroundMusic(getMusic(MUSIC_TYPE_BACKGROUND));
 	audio->preloadBackgroundMusic(getMusic(MUSIC_TYPE_BIG_SPACESHIP_FLYING));
-	//¼ÓÔØÒôĞ§ ÔÚwin32ÏÂ¼ÓÔØÒôĞ§Ã»ÓĞÊ²Ã´Ğ§¹û£¬²¥·Å³öÀ´ÊÇÖÍºóµÄ£¬µ«ÊÇÔÚandroidÉÏÃ»ÓĞÖÍºóµÄÎÊÌâ
+	//åŠ è½½éŸ³æ•ˆ åœ¨win32ä¸‹åŠ è½½éŸ³æ•ˆæ²¡æœ‰ä»€ä¹ˆæ•ˆæœï¼Œæ’­æ”¾å‡ºæ¥æ˜¯æ»åçš„ï¼Œä½†æ˜¯åœ¨androidä¸Šæ²¡æœ‰æ»åçš„é—®é¢˜
 	audio->preloadEffect(getEffect(EFFECT_TYPE_BULLET));
 	audio->preloadEffect(getEffect(EFFECT_TYPE_BUTTON));
 	audio->preloadEffect(getEffect(EFFECT_TYPE_ENEMY1_DOWN));
@@ -37,22 +37,18 @@ Sound::Sound()
 	audio->preloadEffect(getEffect(EFFECT_TYPE_GAME_OVER));
 	audio->preloadEffect(getEffect(EFFECT_TYPE_GET_UFO));
 	audio->preloadEffect(getEffect(EFFECT_TYPE_OUT_PORP));
-	//ÉèÖÃÉùÒôµÄ´óĞ¡0.0-1.0 ÔÚwin32ÏÂÒ²ÊÇ¿ÕµÄÊµÏÖ
+	//è®¾ç½®å£°éŸ³çš„å¤§å°0.0-1.0 åœ¨win32ä¸‹ä¹Ÿæ˜¯ç©ºçš„å®ç°
 	audio->setBackgroundMusicVolume(0.5f);
 }
 
-//»ñÈ¡ÒôĞ§ºÍÒôÀÖµÄÎÄ¼ş
+//è·å–éŸ³æ•ˆå’ŒéŸ³ä¹çš„æ–‡ä»¶
 char * Sound::getMusic(MUSIC_TYPE type)
 {
 	switch(type)
 	{
 	case MUSIC_TYPE_BACKGROUND:
-		//»ñÈ¡²»Í¬Æ½Ì¨ÏÂµÄÎÄ¼ş
-#if(CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+		//è·å–ä¸åŒå¹³å°ä¸‹çš„æ–‡ä»¶
 		return "sound/game_music.mp3";
-#elif(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-		return "sound/game_music.mp3";
-#endif
 		break;
 	case MUSIC_TYPE_BIG_SPACESHIP_FLYING:
 		return "sound/big_spaceship_flying.mp3";
@@ -94,7 +90,7 @@ char * Sound::getEffect(EFFECT_TYPE type)
 	}
 }
 
-//²¥·ÅÒôÀÖºÍÒôĞ§
+//æ’­æ”¾éŸ³ä¹å’ŒéŸ³æ•ˆ
 void Sound::playEffect(EFFECT_TYPE type)
 {
 	auto audio = SimpleAudioEngine::getInstance();
