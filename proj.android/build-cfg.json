@@ -1,0 +1,17 @@
+{
+    "alias": "gaohuang", 
+    "alias_pass": "gaohuang", 
+    "copy_resources": [
+        {
+            "from": "../Resources", 
+            "to": ""
+        }
+    ], 
+    "key_store": "e:\\ophone.keystore", 
+    "key_store_pass": "gaohuang", 
+    "ndk_module_path": [
+        "../cocos2d", 
+        "../cocos2d/cocos", 
+        "../cocos2d/external"
+    ]
+}
