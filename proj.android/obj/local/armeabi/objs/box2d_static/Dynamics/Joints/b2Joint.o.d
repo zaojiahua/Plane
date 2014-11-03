@@ -1,161 +1,161 @@
 obj/local/armeabi/objs/box2d_static/Dynamics/Joints/b2Joint.o: \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/Dynamics/Joints/b2Joint.cpp \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2Math.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/assert.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/api-level.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/math.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/stdint.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/_types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/_types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/asm/types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/limits.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/limits.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/limits.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/limits.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/asm/page.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/memory \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/memory.h \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/Dynamics/Joints/b2Joint.cpp \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2Math.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/math.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/limits.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/page.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/memory \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2Math.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2Math.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/assert.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/api-level.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/math.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/math.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/stdint.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/asm/types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/limits.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/limits.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/asm/page.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/page.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/memory:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/memory:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/memory.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h:

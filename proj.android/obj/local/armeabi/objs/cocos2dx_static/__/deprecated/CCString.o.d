@@ -1,140 +1,140 @@
 obj/local/armeabi/objs/cocos2dx_static/__/deprecated/CCString.o: \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../deprecated/CCString.cpp \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../deprecated/CCString.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/string.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/api-level.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/malloc.h \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/functional \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../deprecated/CCArray.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccCArray.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccMacros.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCConsole.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/select.h \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccMacros.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformMacros.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/log.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCStdC.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformMacros.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/math.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/stdlib.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/alloca.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/strings.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/memory.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCRef.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCDataVisitor.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/CCFileUtils.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccTypes.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCGeometry.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCGL.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCValue.h \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCData.h
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../deprecated/CCString.cpp \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../deprecated/CCString.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/string.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/malloc.h \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/functional \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../deprecated/CCArray.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccCArray.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccMacros.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCConsole.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccMacros.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformMacros.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccConfig.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/log.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCStdC.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformMacros.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/math.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdlib.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/alloca.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccConfig.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCRef.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCDataVisitor.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/CCFileUtils.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccTypes.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCGeometry.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCGL.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCValue.h \
+ /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCData.h
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../deprecated/CCString.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../deprecated/CCString.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/string.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/string.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/api-level.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/malloc.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/malloc.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/functional:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/functional:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../deprecated/CCArray.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../deprecated/CCArray.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccCArray.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccCArray.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccMacros.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccMacros.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCConsole.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCConsole.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/sys/select.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/select.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccMacros.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccMacros.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformMacros.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformMacros.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccConfig.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/log.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/log.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCStdC.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCStdC.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformMacros.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformMacros.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/math.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/math.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/stdlib.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdlib.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/alloca.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/alloca.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/strings.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/memory.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccConfig.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCRef.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCRef.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCDataVisitor.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCDataVisitor.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/CCFileUtils.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/CCFileUtils.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccTypes.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccTypes.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCGeometry.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCGeometry.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCGL.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCGL.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCValue.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCValue.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCData.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCData.h:

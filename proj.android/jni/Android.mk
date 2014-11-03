@@ -12,18 +12,18 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/MainGame.cpp \
                    ../../Classes/ScoreScene.cpp \
                    ../../Classes/GameOver.cpp \
-		   ../../Classes/Pause.cpp \
-		   ../../Classes/AboutMe.cpp \
-                   ../../Classes/Layer/Background.cpp \
-		   ../../Classes/Layer/UILayer.cpp \
-                   ../../Classes/Player/Player.cpp \
-                   ../../Classes/Enemy/EnemyBase.cpp \
-                   ../../Classes/Bullet/Bullet.cpp \
-                   ../../Classes/Manager/Manager.cpp \
-                   ../../Classes/Ufo/Ufo.cpp \
-                   ../../Classes/SaveData/SaveData.cpp \
-                   ../../Classes/Sound/Sound.cpp \
-                  
+		   		   ../../Classes/Pause.cpp \
+		   		   ../../Classes/AboutMe.cpp \
+                   ../../Classes/Background.cpp \
+		   		   ../../Classes/UILayer.cpp \
+                   ../../Classes/Player.cpp \
+                   ../../Classes/EnemyBase.cpp \
+                   ../../Classes/Bullet.cpp \
+                   ../../Classes/Manager.cpp \
+                   ../../Classes/Ufo.cpp \
+                   ../../Classes/SaveData.cpp \
+                   ../../Classes/Sound.cpp \
+                   ../../Classes/WapsAd.cpp \
                    
 		
 

@@ -1,47 +1,170 @@
-obj/local/armeabi/objs-debug/cocos2dx_static/__/__/external/tinyxml2/tinyxml2.o: \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../../external/tinyxml2/tinyxml2.cpp \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../../external/tinyxml2/tinyxml2.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformMacros.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
- E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h \
- E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/log.h \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cctype \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/climits \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/new \
- E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstddef
+./obj/local/armeabi/objs-debug/cocos2dx_static/__/__/external/tinyxml2/tinyxml2.o: \
+  /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../../external/tinyxml2/tinyxml2.cpp \
+  /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../../external/tinyxml2/tinyxml2.h \
+  /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformConfig.h \
+  /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformMacros.h \
+  /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccConfig.h \
+  /Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/log.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cctype \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__config \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/ctype.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/ctype.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/xlocale.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/climits \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/limits.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/page.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstdio \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/stdio.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdio.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/types.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/stdint.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/types.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/wchar.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/wctype.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstdlib \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/stdlib.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdlib.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/string.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/string.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/malloc.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/monetary.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/alloca.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h \
+  /Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstring \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstdarg \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/new \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/exception \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstddef \
+  /Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/type_traits
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../../external/tinyxml2/tinyxml2.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../../external/tinyxml2/tinyxml2.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformMacros.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/../base/CCPlatformMacros.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/ccConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/ccConfig.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/../base/CCPlatformConfig.h:
+/Users/mac/Documents/cocos2d-x/cocos2d-x-3.0/projects/Plane/proj.android/../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h:
 
-E:\cocos2d-x-3.0\cocos2d-x-3.0\projects\Plane\proj.android\../cocos2d/cocos/2d/platform/android/CCPlatformDefine.h:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/log.h:
 
-E:/android-ndk-r9/android-ndk-r9/platforms/android-9/arch-arm/usr/include/android/log.h:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cctype:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cctype:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__config:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/climits:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/ctype.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/ctype.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdlib:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg:
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/android/api-level.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/new:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/xlocale.h:
 
-E:/android-ndk-r9/android-ndk-r9/sources/cxx-stl/gnu-libstdc++/4.8/include/cstddef:
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/climits:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/page.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstdio:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/stdio.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdio.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/types.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/stdint.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/asm/types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/types.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/wchar.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/wctype.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstdlib:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/stdlib.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdlib.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/string.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/string.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/malloc.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/../../android/support/include/monetary.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/alloca.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h:
+
+/Users/mac/Documents/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstring:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstdarg:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/new:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/exception:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstddef:
+
+/Users/mac/Documents/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/type_traits:

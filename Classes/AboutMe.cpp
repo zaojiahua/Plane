@@ -1,4 +1,5 @@
 #include "AboutMe.h"
+#include "WapsAd.h"
 
 AboutMe::AboutMe(void)
 {
@@ -51,6 +52,9 @@ bool AboutMe::init()
 	label->setHorizontalAlignment(TextHAlignment::CENTER);
 	label->setPosition(size.width/2,size.height*0.4);
 	this->addChild(label);
+    
+    //调用banner广告
+    WapsAd::showAd(13);
 
 	return true;
 }

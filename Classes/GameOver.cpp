@@ -1,4 +1,5 @@
 #include "GameOver.h"
+#include "WapsAd.h"
 
 GameOver::GameOver(void)
 {
@@ -45,6 +46,8 @@ bool GameOver::init()
 	score->setColor(Color3B(100,100,100));
 	this->addChild(score);
 
+    //调用插屏广告
+    WapsAd::showAd(1);
 
 	return true;
 }

@@ -1,4 +1,5 @@
 #include "ScoreScene.h"
+#include "WapsAd.h"
 
 ScoreScene::ScoreScene(void)
 {
@@ -62,6 +63,9 @@ bool ScoreScene::init()
 	auto listener = EventListenerKeyboard::create();
 	listener->onKeyReleased = CC_CALLBACK_2(ScoreScene::onKeyReleased,this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener,this);
+    
+    //调用迷你广告
+    WapsAd::showAd(14);
 
 	return true;
 }
