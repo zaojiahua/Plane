@@ -43,6 +43,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
@@ -94,12 +95,19 @@ public class AppActivity extends Cocos2dxActivity implements UpdatePointsNotifie
 		handler.sendMessage(msg); 
 	}
 	
-//	public static void uninstallAd(){
-//		// 初始化卸载广告 
-//		AppConnect.getInstance(mContext).initUninstallAd(mContext);
-//	}
+	//根据传入的id，卸载广告
+	public static void uninstallAd(int adTag){
+		Message msg = handler.obtainMessage();
+		// 私有静态的整型变量,开发者请自行定义值
+		msg.what = adTag+100; 
+		handler.sendMessage(msg);
+	}
 	
 	class AdHandler extends Handler{
+		//保存俩个layout，广告卸载的时候用
+		private LinearLayout adBannerLayout=null;
+		private LinearLayout adMiniLayout=null;
+		
 		public void handleMessage(Message msg) {
 			switch (msg.what){
 			case 0:
@@ -165,13 +173,16 @@ public class AppActivity extends Cocos2dxActivity implements UpdatePointsNotifie
 				// 迷你广告
 				AppConnect.getInstance(mContext).showMiniAd(mContext,getMiniAd(), 10);
 				break;
+			default:
+				this.uninstallAd(msg.what-100);
+				break;
 			}
 		}
 		
 		//添加互动广告
 		private LinearLayout getBannerAd(){
 			// 互动广告
-			LinearLayout adBannerLayout = new LinearLayout(mContext);
+			adBannerLayout = new LinearLayout(mContext);
 			adBannerLayout.setOrientation(LinearLayout.VERTICAL);
 			FrameLayout.LayoutParams lp_banner = new FrameLayout.LayoutParams(
 			FrameLayout.LayoutParams.FILL_PARENT,
@@ -188,7 +199,7 @@ public class AppActivity extends Cocos2dxActivity implements UpdatePointsNotifie
 		
 		//添加迷你广告
 		private LinearLayout getMiniAd(){
-			LinearLayout adMiniLayout = new LinearLayout(mContext); 
+			adMiniLayout = new LinearLayout(mContext); 
 			adMiniLayout.setOrientation(LinearLayout.VERTICAL); 
 			FrameLayout.LayoutParams lp_mini = new FrameLayout.LayoutParams(
 			FrameLayout.LayoutParams.FILL_PARENT,
@@ -200,6 +211,16 @@ public class AppActivity extends Cocos2dxActivity implements UpdatePointsNotifie
 			adMiniLayout.addView(miniLayout);
 			
 			return miniLayout;
+		}
+		
+		//在创建的广告的线程中卸载广告
+		public void uninstallAd(int adTag){
+			if(adTag == 13){
+				adBannerLayout.setVisibility(View.INVISIBLE);
+			}
+			else if(adTag == 14){
+				adMiniLayout.setVisibility(View.INVISIBLE);
+			}
 		}
 	}
 }

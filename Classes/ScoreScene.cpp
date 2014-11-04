@@ -76,6 +76,7 @@ void ScoreScene::onKeyReleased(EventKeyboard::KeyCode keyCode,Event * pEvent)
 	if(keyCode == EventKeyboard::KeyCode::KEY_BACKSPACE)
 		//将开始场景弹出
 		Director::getInstance()->popScene();
+    WapsAd::uninstallAd(14);
 }
 
 //这个函数比较关键，是用来设置每个cell的内容的

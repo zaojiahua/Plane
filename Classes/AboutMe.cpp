@@ -63,4 +63,5 @@ void AboutMe::back(EventKeyboard::KeyCode keyCode,Event * pEvent)
 {
 	if(keyCode == EventKeyboard::KeyCode::KEY_BACKSPACE)
 		Director::getInstance()->popScene();
+    WapsAd::uninstallAd(13);
 }

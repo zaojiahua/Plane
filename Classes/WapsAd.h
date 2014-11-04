@@ -28,7 +28,8 @@ public:
     virtual ~WapsAd();
     //通过JNI调用JAVA静态函数，实现展示AD
     static void showAd(int adTag);
-//    static void uninstallAd();
+    //卸载广告
+    static void uninstallAd(int adTag);
 };
 
 #endif /* defined(__Plane__WapsAd__) */

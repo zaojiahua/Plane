@@ -30,19 +30,19 @@ void WapsAd::showAd(int adTag)
 #endif
 }
 
-//void WapsAd::uninstallAd()
-//{
-//#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-//    JniMethodInfo minfo;
-//    bool isHave = JniHelper::getStaticMethodInfo(minfo,"org/cocos2dx/cpp/AppActivity","uninstallAd", "(V)V");
-//    if(!isHave)
-//    {
-//        CCLog("jni:showAdStatic is null");
-//    }
-//    else
-//    {
-//        //调用此函数
-//        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
-//    }
-//#endif
-//}
+void WapsAd::uninstallAd(int adTag)
+{
+#if(CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    JniMethodInfo minfo;
+    bool isHave = JniHelper::getStaticMethodInfo(minfo,"org/cocos2dx/cpp/AppActivity","uninstallAd", "(I)V");
+    if(!isHave)
+    {
+        CCLog("jni:showAdStatic is null");
+    }
+    else
+    {
+        //调用此函数
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID,adTag);
+    }
+#endif
+}
